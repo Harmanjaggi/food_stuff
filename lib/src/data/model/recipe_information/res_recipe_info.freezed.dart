@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'res_recipe_info.dart';
 
@@ -11,94 +12,11 @@ part of 'res_recipe_info.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ResRecipeInfo _$ResRecipeInfoFromJson(Map<String, dynamic> json) {
   return _ResRecipeInfo.fromJson(json);
 }
-
-/// @nodoc
-class _$ResRecipeInfoTearOff {
-  const _$ResRecipeInfoTearOff();
-
-  _ResRecipeInfo call(
-      {bool? vegetarian,
-      bool? vegan,
-      bool? glutenFree,
-      bool? dairyFree,
-      bool? veryHealthy,
-      bool? cheap,
-      bool? veryPopular,
-      bool? sustainable,
-      int? weightWatcherSmartPoints,
-      String? gaps,
-      bool? lowFodmap,
-      int? aggregateLikes,
-      double? healthScore,
-      String? creditsText,
-      String? license,
-      String? sourceName,
-      required List<ExtendedIngredient> extendedIngredients,
-      int? id,
-      String? title,
-      int? readyInMinutes,
-      int? servings,
-      String? sourceUrl,
-      String? image,
-      String? imageType,
-      String? summary,
-      required List<dynamic> cuisines,
-      required List<String> dishTypes,
-      required List<String> diets,
-      required List<dynamic> occasions,
-      String? instructions,
-      required List<AnalysedInstructions> analyzedInstructions,
-      dynamic? originalId,
-      String? spoonacularSourceUrl}) {
-    return _ResRecipeInfo(
-      vegetarian: vegetarian,
-      vegan: vegan,
-      glutenFree: glutenFree,
-      dairyFree: dairyFree,
-      veryHealthy: veryHealthy,
-      cheap: cheap,
-      veryPopular: veryPopular,
-      sustainable: sustainable,
-      weightWatcherSmartPoints: weightWatcherSmartPoints,
-      gaps: gaps,
-      lowFodmap: lowFodmap,
-      aggregateLikes: aggregateLikes,
-      healthScore: healthScore,
-      creditsText: creditsText,
-      license: license,
-      sourceName: sourceName,
-      extendedIngredients: extendedIngredients,
-      id: id,
-      title: title,
-      readyInMinutes: readyInMinutes,
-      servings: servings,
-      sourceUrl: sourceUrl,
-      image: image,
-      imageType: imageType,
-      summary: summary,
-      cuisines: cuisines,
-      dishTypes: dishTypes,
-      diets: diets,
-      occasions: occasions,
-      instructions: instructions,
-      analyzedInstructions: analyzedInstructions,
-      originalId: originalId,
-      spoonacularSourceUrl: spoonacularSourceUrl,
-    );
-  }
-
-  ResRecipeInfo fromJson(Map<String, Object> json) {
-    return ResRecipeInfo.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ResRecipeInfo = _$ResRecipeInfoTearOff();
 
 /// @nodoc
 mixin _$ResRecipeInfo {
@@ -118,7 +36,7 @@ mixin _$ResRecipeInfo {
   String? get creditsText => throw _privateConstructorUsedError;
   String? get license => throw _privateConstructorUsedError;
   String? get sourceName => throw _privateConstructorUsedError;
-  List<ExtendedIngredient> get extendedIngredients =>
+  List<ExtendedIngredient>? get extendedIngredients =>
       throw _privateConstructorUsedError;
   int? get id => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
@@ -128,14 +46,14 @@ mixin _$ResRecipeInfo {
   String? get image => throw _privateConstructorUsedError;
   String? get imageType => throw _privateConstructorUsedError;
   String? get summary => throw _privateConstructorUsedError;
-  List<dynamic> get cuisines => throw _privateConstructorUsedError;
-  List<String> get dishTypes => throw _privateConstructorUsedError;
-  List<String> get diets => throw _privateConstructorUsedError;
-  List<dynamic> get occasions => throw _privateConstructorUsedError;
+  List<String>? get cuisines => throw _privateConstructorUsedError;
+  List<String>? get dishTypes => throw _privateConstructorUsedError;
+  List<String>? get diets => throw _privateConstructorUsedError;
+  List<String>? get occasions => throw _privateConstructorUsedError;
   String? get instructions => throw _privateConstructorUsedError;
-  List<AnalysedInstructions> get analyzedInstructions =>
+  List<AnalysedInstructions>? get analyzedInstructions =>
       throw _privateConstructorUsedError;
-  dynamic? get originalId => throw _privateConstructorUsedError;
+  dynamic get originalId => throw _privateConstructorUsedError;
   String? get spoonacularSourceUrl => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -148,7 +66,8 @@ mixin _$ResRecipeInfo {
 abstract class $ResRecipeInfoCopyWith<$Res> {
   factory $ResRecipeInfoCopyWith(
           ResRecipeInfo value, $Res Function(ResRecipeInfo) then) =
-      _$ResRecipeInfoCopyWithImpl<$Res>;
+      _$ResRecipeInfoCopyWithImpl<$Res, ResRecipeInfo>;
+  @useResult
   $Res call(
       {bool? vegetarian,
       bool? vegan,
@@ -166,7 +85,7 @@ abstract class $ResRecipeInfoCopyWith<$Res> {
       String? creditsText,
       String? license,
       String? sourceName,
-      List<ExtendedIngredient> extendedIngredients,
+      List<ExtendedIngredient>? extendedIngredients,
       int? id,
       String? title,
       int? readyInMinutes,
@@ -175,25 +94,27 @@ abstract class $ResRecipeInfoCopyWith<$Res> {
       String? image,
       String? imageType,
       String? summary,
-      List<dynamic> cuisines,
-      List<String> dishTypes,
-      List<String> diets,
-      List<dynamic> occasions,
+      List<String>? cuisines,
+      List<String>? dishTypes,
+      List<String>? diets,
+      List<String>? occasions,
       String? instructions,
-      List<AnalysedInstructions> analyzedInstructions,
-      dynamic? originalId,
+      List<AnalysedInstructions>? analyzedInstructions,
+      dynamic originalId,
       String? spoonacularSourceUrl});
 }
 
 /// @nodoc
-class _$ResRecipeInfoCopyWithImpl<$Res>
+class _$ResRecipeInfoCopyWithImpl<$Res, $Val extends ResRecipeInfo>
     implements $ResRecipeInfoCopyWith<$Res> {
   _$ResRecipeInfoCopyWithImpl(this._value, this._then);
 
-  final ResRecipeInfo _value;
   // ignore: unused_field
-  final $Res Function(ResRecipeInfo) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? vegetarian = freezed,
@@ -231,149 +152,150 @@ class _$ResRecipeInfoCopyWithImpl<$Res>
     Object? spoonacularSourceUrl = freezed,
   }) {
     return _then(_value.copyWith(
-      vegetarian: vegetarian == freezed
+      vegetarian: freezed == vegetarian
           ? _value.vegetarian
           : vegetarian // ignore: cast_nullable_to_non_nullable
               as bool?,
-      vegan: vegan == freezed
+      vegan: freezed == vegan
           ? _value.vegan
           : vegan // ignore: cast_nullable_to_non_nullable
               as bool?,
-      glutenFree: glutenFree == freezed
+      glutenFree: freezed == glutenFree
           ? _value.glutenFree
           : glutenFree // ignore: cast_nullable_to_non_nullable
               as bool?,
-      dairyFree: dairyFree == freezed
+      dairyFree: freezed == dairyFree
           ? _value.dairyFree
           : dairyFree // ignore: cast_nullable_to_non_nullable
               as bool?,
-      veryHealthy: veryHealthy == freezed
+      veryHealthy: freezed == veryHealthy
           ? _value.veryHealthy
           : veryHealthy // ignore: cast_nullable_to_non_nullable
               as bool?,
-      cheap: cheap == freezed
+      cheap: freezed == cheap
           ? _value.cheap
           : cheap // ignore: cast_nullable_to_non_nullable
               as bool?,
-      veryPopular: veryPopular == freezed
+      veryPopular: freezed == veryPopular
           ? _value.veryPopular
           : veryPopular // ignore: cast_nullable_to_non_nullable
               as bool?,
-      sustainable: sustainable == freezed
+      sustainable: freezed == sustainable
           ? _value.sustainable
           : sustainable // ignore: cast_nullable_to_non_nullable
               as bool?,
-      weightWatcherSmartPoints: weightWatcherSmartPoints == freezed
+      weightWatcherSmartPoints: freezed == weightWatcherSmartPoints
           ? _value.weightWatcherSmartPoints
           : weightWatcherSmartPoints // ignore: cast_nullable_to_non_nullable
               as int?,
-      gaps: gaps == freezed
+      gaps: freezed == gaps
           ? _value.gaps
           : gaps // ignore: cast_nullable_to_non_nullable
               as String?,
-      lowFodmap: lowFodmap == freezed
+      lowFodmap: freezed == lowFodmap
           ? _value.lowFodmap
           : lowFodmap // ignore: cast_nullable_to_non_nullable
               as bool?,
-      aggregateLikes: aggregateLikes == freezed
+      aggregateLikes: freezed == aggregateLikes
           ? _value.aggregateLikes
           : aggregateLikes // ignore: cast_nullable_to_non_nullable
               as int?,
-      healthScore: healthScore == freezed
+      healthScore: freezed == healthScore
           ? _value.healthScore
           : healthScore // ignore: cast_nullable_to_non_nullable
               as double?,
-      creditsText: creditsText == freezed
+      creditsText: freezed == creditsText
           ? _value.creditsText
           : creditsText // ignore: cast_nullable_to_non_nullable
               as String?,
-      license: license == freezed
+      license: freezed == license
           ? _value.license
           : license // ignore: cast_nullable_to_non_nullable
               as String?,
-      sourceName: sourceName == freezed
+      sourceName: freezed == sourceName
           ? _value.sourceName
           : sourceName // ignore: cast_nullable_to_non_nullable
               as String?,
-      extendedIngredients: extendedIngredients == freezed
+      extendedIngredients: freezed == extendedIngredients
           ? _value.extendedIngredients
           : extendedIngredients // ignore: cast_nullable_to_non_nullable
-              as List<ExtendedIngredient>,
-      id: id == freezed
+              as List<ExtendedIngredient>?,
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      readyInMinutes: readyInMinutes == freezed
+      readyInMinutes: freezed == readyInMinutes
           ? _value.readyInMinutes
           : readyInMinutes // ignore: cast_nullable_to_non_nullable
               as int?,
-      servings: servings == freezed
+      servings: freezed == servings
           ? _value.servings
           : servings // ignore: cast_nullable_to_non_nullable
               as int?,
-      sourceUrl: sourceUrl == freezed
+      sourceUrl: freezed == sourceUrl
           ? _value.sourceUrl
           : sourceUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      image: image == freezed
+      image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String?,
-      imageType: imageType == freezed
+      imageType: freezed == imageType
           ? _value.imageType
           : imageType // ignore: cast_nullable_to_non_nullable
               as String?,
-      summary: summary == freezed
+      summary: freezed == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as String?,
-      cuisines: cuisines == freezed
+      cuisines: freezed == cuisines
           ? _value.cuisines
           : cuisines // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
-      dishTypes: dishTypes == freezed
+              as List<String>?,
+      dishTypes: freezed == dishTypes
           ? _value.dishTypes
           : dishTypes // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      diets: diets == freezed
+              as List<String>?,
+      diets: freezed == diets
           ? _value.diets
           : diets // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      occasions: occasions == freezed
+              as List<String>?,
+      occasions: freezed == occasions
           ? _value.occasions
           : occasions // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
-      instructions: instructions == freezed
+              as List<String>?,
+      instructions: freezed == instructions
           ? _value.instructions
           : instructions // ignore: cast_nullable_to_non_nullable
               as String?,
-      analyzedInstructions: analyzedInstructions == freezed
+      analyzedInstructions: freezed == analyzedInstructions
           ? _value.analyzedInstructions
           : analyzedInstructions // ignore: cast_nullable_to_non_nullable
-              as List<AnalysedInstructions>,
-      originalId: originalId == freezed
+              as List<AnalysedInstructions>?,
+      originalId: freezed == originalId
           ? _value.originalId
           : originalId // ignore: cast_nullable_to_non_nullable
-              as dynamic?,
-      spoonacularSourceUrl: spoonacularSourceUrl == freezed
+              as dynamic,
+      spoonacularSourceUrl: freezed == spoonacularSourceUrl
           ? _value.spoonacularSourceUrl
           : spoonacularSourceUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ResRecipeInfoCopyWith<$Res>
+abstract class _$$ResRecipeInfoImplCopyWith<$Res>
     implements $ResRecipeInfoCopyWith<$Res> {
-  factory _$ResRecipeInfoCopyWith(
-          _ResRecipeInfo value, $Res Function(_ResRecipeInfo) then) =
-      __$ResRecipeInfoCopyWithImpl<$Res>;
+  factory _$$ResRecipeInfoImplCopyWith(
+          _$ResRecipeInfoImpl value, $Res Function(_$ResRecipeInfoImpl) then) =
+      __$$ResRecipeInfoImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {bool? vegetarian,
       bool? vegan,
@@ -391,7 +313,7 @@ abstract class _$ResRecipeInfoCopyWith<$Res>
       String? creditsText,
       String? license,
       String? sourceName,
-      List<ExtendedIngredient> extendedIngredients,
+      List<ExtendedIngredient>? extendedIngredients,
       int? id,
       String? title,
       int? readyInMinutes,
@@ -400,27 +322,25 @@ abstract class _$ResRecipeInfoCopyWith<$Res>
       String? image,
       String? imageType,
       String? summary,
-      List<dynamic> cuisines,
-      List<String> dishTypes,
-      List<String> diets,
-      List<dynamic> occasions,
+      List<String>? cuisines,
+      List<String>? dishTypes,
+      List<String>? diets,
+      List<String>? occasions,
       String? instructions,
-      List<AnalysedInstructions> analyzedInstructions,
-      dynamic? originalId,
+      List<AnalysedInstructions>? analyzedInstructions,
+      dynamic originalId,
       String? spoonacularSourceUrl});
 }
 
 /// @nodoc
-class __$ResRecipeInfoCopyWithImpl<$Res>
-    extends _$ResRecipeInfoCopyWithImpl<$Res>
-    implements _$ResRecipeInfoCopyWith<$Res> {
-  __$ResRecipeInfoCopyWithImpl(
-      _ResRecipeInfo _value, $Res Function(_ResRecipeInfo) _then)
-      : super(_value, (v) => _then(v as _ResRecipeInfo));
+class __$$ResRecipeInfoImplCopyWithImpl<$Res>
+    extends _$ResRecipeInfoCopyWithImpl<$Res, _$ResRecipeInfoImpl>
+    implements _$$ResRecipeInfoImplCopyWith<$Res> {
+  __$$ResRecipeInfoImplCopyWithImpl(
+      _$ResRecipeInfoImpl _value, $Res Function(_$ResRecipeInfoImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _ResRecipeInfo get _value => super._value as _ResRecipeInfo;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? vegetarian = freezed,
@@ -457,136 +377,136 @@ class __$ResRecipeInfoCopyWithImpl<$Res>
     Object? originalId = freezed,
     Object? spoonacularSourceUrl = freezed,
   }) {
-    return _then(_ResRecipeInfo(
-      vegetarian: vegetarian == freezed
+    return _then(_$ResRecipeInfoImpl(
+      vegetarian: freezed == vegetarian
           ? _value.vegetarian
           : vegetarian // ignore: cast_nullable_to_non_nullable
               as bool?,
-      vegan: vegan == freezed
+      vegan: freezed == vegan
           ? _value.vegan
           : vegan // ignore: cast_nullable_to_non_nullable
               as bool?,
-      glutenFree: glutenFree == freezed
+      glutenFree: freezed == glutenFree
           ? _value.glutenFree
           : glutenFree // ignore: cast_nullable_to_non_nullable
               as bool?,
-      dairyFree: dairyFree == freezed
+      dairyFree: freezed == dairyFree
           ? _value.dairyFree
           : dairyFree // ignore: cast_nullable_to_non_nullable
               as bool?,
-      veryHealthy: veryHealthy == freezed
+      veryHealthy: freezed == veryHealthy
           ? _value.veryHealthy
           : veryHealthy // ignore: cast_nullable_to_non_nullable
               as bool?,
-      cheap: cheap == freezed
+      cheap: freezed == cheap
           ? _value.cheap
           : cheap // ignore: cast_nullable_to_non_nullable
               as bool?,
-      veryPopular: veryPopular == freezed
+      veryPopular: freezed == veryPopular
           ? _value.veryPopular
           : veryPopular // ignore: cast_nullable_to_non_nullable
               as bool?,
-      sustainable: sustainable == freezed
+      sustainable: freezed == sustainable
           ? _value.sustainable
           : sustainable // ignore: cast_nullable_to_non_nullable
               as bool?,
-      weightWatcherSmartPoints: weightWatcherSmartPoints == freezed
+      weightWatcherSmartPoints: freezed == weightWatcherSmartPoints
           ? _value.weightWatcherSmartPoints
           : weightWatcherSmartPoints // ignore: cast_nullable_to_non_nullable
               as int?,
-      gaps: gaps == freezed
+      gaps: freezed == gaps
           ? _value.gaps
           : gaps // ignore: cast_nullable_to_non_nullable
               as String?,
-      lowFodmap: lowFodmap == freezed
+      lowFodmap: freezed == lowFodmap
           ? _value.lowFodmap
           : lowFodmap // ignore: cast_nullable_to_non_nullable
               as bool?,
-      aggregateLikes: aggregateLikes == freezed
+      aggregateLikes: freezed == aggregateLikes
           ? _value.aggregateLikes
           : aggregateLikes // ignore: cast_nullable_to_non_nullable
               as int?,
-      healthScore: healthScore == freezed
+      healthScore: freezed == healthScore
           ? _value.healthScore
           : healthScore // ignore: cast_nullable_to_non_nullable
               as double?,
-      creditsText: creditsText == freezed
+      creditsText: freezed == creditsText
           ? _value.creditsText
           : creditsText // ignore: cast_nullable_to_non_nullable
               as String?,
-      license: license == freezed
+      license: freezed == license
           ? _value.license
           : license // ignore: cast_nullable_to_non_nullable
               as String?,
-      sourceName: sourceName == freezed
+      sourceName: freezed == sourceName
           ? _value.sourceName
           : sourceName // ignore: cast_nullable_to_non_nullable
               as String?,
-      extendedIngredients: extendedIngredients == freezed
-          ? _value.extendedIngredients
+      extendedIngredients: freezed == extendedIngredients
+          ? _value._extendedIngredients
           : extendedIngredients // ignore: cast_nullable_to_non_nullable
-              as List<ExtendedIngredient>,
-      id: id == freezed
+              as List<ExtendedIngredient>?,
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      readyInMinutes: readyInMinutes == freezed
+      readyInMinutes: freezed == readyInMinutes
           ? _value.readyInMinutes
           : readyInMinutes // ignore: cast_nullable_to_non_nullable
               as int?,
-      servings: servings == freezed
+      servings: freezed == servings
           ? _value.servings
           : servings // ignore: cast_nullable_to_non_nullable
               as int?,
-      sourceUrl: sourceUrl == freezed
+      sourceUrl: freezed == sourceUrl
           ? _value.sourceUrl
           : sourceUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      image: image == freezed
+      image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String?,
-      imageType: imageType == freezed
+      imageType: freezed == imageType
           ? _value.imageType
           : imageType // ignore: cast_nullable_to_non_nullable
               as String?,
-      summary: summary == freezed
+      summary: freezed == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as String?,
-      cuisines: cuisines == freezed
-          ? _value.cuisines
+      cuisines: freezed == cuisines
+          ? _value._cuisines
           : cuisines // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
-      dishTypes: dishTypes == freezed
-          ? _value.dishTypes
+              as List<String>?,
+      dishTypes: freezed == dishTypes
+          ? _value._dishTypes
           : dishTypes // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      diets: diets == freezed
-          ? _value.diets
+              as List<String>?,
+      diets: freezed == diets
+          ? _value._diets
           : diets // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      occasions: occasions == freezed
-          ? _value.occasions
+              as List<String>?,
+      occasions: freezed == occasions
+          ? _value._occasions
           : occasions // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
-      instructions: instructions == freezed
+              as List<String>?,
+      instructions: freezed == instructions
           ? _value.instructions
           : instructions // ignore: cast_nullable_to_non_nullable
               as String?,
-      analyzedInstructions: analyzedInstructions == freezed
-          ? _value.analyzedInstructions
+      analyzedInstructions: freezed == analyzedInstructions
+          ? _value._analyzedInstructions
           : analyzedInstructions // ignore: cast_nullable_to_non_nullable
-              as List<AnalysedInstructions>,
-      originalId: originalId == freezed
+              as List<AnalysedInstructions>?,
+      originalId: freezed == originalId
           ? _value.originalId
           : originalId // ignore: cast_nullable_to_non_nullable
-              as dynamic?,
-      spoonacularSourceUrl: spoonacularSourceUrl == freezed
+              as dynamic,
+      spoonacularSourceUrl: freezed == spoonacularSourceUrl
           ? _value.spoonacularSourceUrl
           : spoonacularSourceUrl // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -596,8 +516,8 @@ class __$ResRecipeInfoCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResRecipeInfo implements _ResRecipeInfo {
-  const _$_ResRecipeInfo(
+class _$ResRecipeInfoImpl implements _ResRecipeInfo {
+  const _$ResRecipeInfoImpl(
       {this.vegetarian,
       this.vegan,
       this.glutenFree,
@@ -614,7 +534,7 @@ class _$_ResRecipeInfo implements _ResRecipeInfo {
       this.creditsText,
       this.license,
       this.sourceName,
-      required this.extendedIngredients,
+      final List<ExtendedIngredient>? extendedIngredients,
       this.id,
       this.title,
       this.readyInMinutes,
@@ -623,17 +543,23 @@ class _$_ResRecipeInfo implements _ResRecipeInfo {
       this.image,
       this.imageType,
       this.summary,
-      required this.cuisines,
-      required this.dishTypes,
-      required this.diets,
-      required this.occasions,
+      final List<String>? cuisines,
+      final List<String>? dishTypes,
+      final List<String>? diets,
+      final List<String>? occasions,
       this.instructions,
-      required this.analyzedInstructions,
+      final List<AnalysedInstructions>? analyzedInstructions,
       this.originalId,
-      this.spoonacularSourceUrl});
+      this.spoonacularSourceUrl})
+      : _extendedIngredients = extendedIngredients,
+        _cuisines = cuisines,
+        _dishTypes = dishTypes,
+        _diets = diets,
+        _occasions = occasions,
+        _analyzedInstructions = analyzedInstructions;
 
-  factory _$_ResRecipeInfo.fromJson(Map<String, dynamic> json) =>
-      _$$_ResRecipeInfoFromJson(json);
+  factory _$ResRecipeInfoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResRecipeInfoImplFromJson(json);
 
   @override
   final bool? vegetarian;
@@ -667,8 +593,17 @@ class _$_ResRecipeInfo implements _ResRecipeInfo {
   final String? license;
   @override
   final String? sourceName;
+  final List<ExtendedIngredient>? _extendedIngredients;
   @override
-  final List<ExtendedIngredient> extendedIngredients;
+  List<ExtendedIngredient>? get extendedIngredients {
+    final value = _extendedIngredients;
+    if (value == null) return null;
+    if (_extendedIngredients is EqualUnmodifiableListView)
+      return _extendedIngredients;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final int? id;
   @override
@@ -685,20 +620,61 @@ class _$_ResRecipeInfo implements _ResRecipeInfo {
   final String? imageType;
   @override
   final String? summary;
+  final List<String>? _cuisines;
   @override
-  final List<dynamic> cuisines;
+  List<String>? get cuisines {
+    final value = _cuisines;
+    if (value == null) return null;
+    if (_cuisines is EqualUnmodifiableListView) return _cuisines;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _dishTypes;
   @override
-  final List<String> dishTypes;
+  List<String>? get dishTypes {
+    final value = _dishTypes;
+    if (value == null) return null;
+    if (_dishTypes is EqualUnmodifiableListView) return _dishTypes;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _diets;
   @override
-  final List<String> diets;
+  List<String>? get diets {
+    final value = _diets;
+    if (value == null) return null;
+    if (_diets is EqualUnmodifiableListView) return _diets;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _occasions;
   @override
-  final List<dynamic> occasions;
+  List<String>? get occasions {
+    final value = _occasions;
+    if (value == null) return null;
+    if (_occasions is EqualUnmodifiableListView) return _occasions;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? instructions;
+  final List<AnalysedInstructions>? _analyzedInstructions;
   @override
-  final List<AnalysedInstructions> analyzedInstructions;
+  List<AnalysedInstructions>? get analyzedInstructions {
+    final value = _analyzedInstructions;
+    if (value == null) return null;
+    if (_analyzedInstructions is EqualUnmodifiableListView)
+      return _analyzedInstructions;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
-  final dynamic? originalId;
+  final dynamic originalId;
   @override
   final String? spoonacularSourceUrl;
 
@@ -708,288 +684,236 @@ class _$_ResRecipeInfo implements _ResRecipeInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _ResRecipeInfo &&
+        (other.runtimeType == runtimeType &&
+            other is _$ResRecipeInfoImpl &&
             (identical(other.vegetarian, vegetarian) ||
-                const DeepCollectionEquality()
-                    .equals(other.vegetarian, vegetarian)) &&
-            (identical(other.vegan, vegan) ||
-                const DeepCollectionEquality().equals(other.vegan, vegan)) &&
+                other.vegetarian == vegetarian) &&
+            (identical(other.vegan, vegan) || other.vegan == vegan) &&
             (identical(other.glutenFree, glutenFree) ||
-                const DeepCollectionEquality()
-                    .equals(other.glutenFree, glutenFree)) &&
+                other.glutenFree == glutenFree) &&
             (identical(other.dairyFree, dairyFree) ||
-                const DeepCollectionEquality()
-                    .equals(other.dairyFree, dairyFree)) &&
+                other.dairyFree == dairyFree) &&
             (identical(other.veryHealthy, veryHealthy) ||
-                const DeepCollectionEquality()
-                    .equals(other.veryHealthy, veryHealthy)) &&
-            (identical(other.cheap, cheap) ||
-                const DeepCollectionEquality().equals(other.cheap, cheap)) &&
+                other.veryHealthy == veryHealthy) &&
+            (identical(other.cheap, cheap) || other.cheap == cheap) &&
             (identical(other.veryPopular, veryPopular) ||
-                const DeepCollectionEquality()
-                    .equals(other.veryPopular, veryPopular)) &&
+                other.veryPopular == veryPopular) &&
             (identical(other.sustainable, sustainable) ||
-                const DeepCollectionEquality()
-                    .equals(other.sustainable, sustainable)) &&
-            (identical(other.weightWatcherSmartPoints, weightWatcherSmartPoints) ||
-                const DeepCollectionEquality().equals(
-                    other.weightWatcherSmartPoints,
-                    weightWatcherSmartPoints)) &&
-            (identical(other.gaps, gaps) ||
-                const DeepCollectionEquality().equals(other.gaps, gaps)) &&
+                other.sustainable == sustainable) &&
+            (identical(
+                    other.weightWatcherSmartPoints, weightWatcherSmartPoints) ||
+                other.weightWatcherSmartPoints == weightWatcherSmartPoints) &&
+            (identical(other.gaps, gaps) || other.gaps == gaps) &&
             (identical(other.lowFodmap, lowFodmap) ||
-                const DeepCollectionEquality()
-                    .equals(other.lowFodmap, lowFodmap)) &&
+                other.lowFodmap == lowFodmap) &&
             (identical(other.aggregateLikes, aggregateLikes) ||
-                const DeepCollectionEquality()
-                    .equals(other.aggregateLikes, aggregateLikes)) &&
+                other.aggregateLikes == aggregateLikes) &&
             (identical(other.healthScore, healthScore) ||
-                const DeepCollectionEquality()
-                    .equals(other.healthScore, healthScore)) &&
+                other.healthScore == healthScore) &&
             (identical(other.creditsText, creditsText) ||
-                const DeepCollectionEquality()
-                    .equals(other.creditsText, creditsText)) &&
-            (identical(other.license, license) ||
-                const DeepCollectionEquality()
-                    .equals(other.license, license)) &&
+                other.creditsText == creditsText) &&
+            (identical(other.license, license) || other.license == license) &&
             (identical(other.sourceName, sourceName) ||
-                const DeepCollectionEquality()
-                    .equals(other.sourceName, sourceName)) &&
-            (identical(other.extendedIngredients, extendedIngredients) ||
-                const DeepCollectionEquality()
-                    .equals(other.extendedIngredients, extendedIngredients)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.title, title) ||
-                const DeepCollectionEquality().equals(other.title, title)) &&
+                other.sourceName == sourceName) &&
+            const DeepCollectionEquality()
+                .equals(other._extendedIngredients, _extendedIngredients) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.title, title) || other.title == title) &&
             (identical(other.readyInMinutes, readyInMinutes) ||
-                const DeepCollectionEquality()
-                    .equals(other.readyInMinutes, readyInMinutes)) &&
+                other.readyInMinutes == readyInMinutes) &&
             (identical(other.servings, servings) ||
-                const DeepCollectionEquality().equals(other.servings, servings)) &&
-            (identical(other.sourceUrl, sourceUrl) || const DeepCollectionEquality().equals(other.sourceUrl, sourceUrl)) &&
-            (identical(other.image, image) || const DeepCollectionEquality().equals(other.image, image)) &&
-            (identical(other.imageType, imageType) || const DeepCollectionEquality().equals(other.imageType, imageType)) &&
-            (identical(other.summary, summary) || const DeepCollectionEquality().equals(other.summary, summary)) &&
-            (identical(other.cuisines, cuisines) || const DeepCollectionEquality().equals(other.cuisines, cuisines)) &&
-            (identical(other.dishTypes, dishTypes) || const DeepCollectionEquality().equals(other.dishTypes, dishTypes)) &&
-            (identical(other.diets, diets) || const DeepCollectionEquality().equals(other.diets, diets)) &&
-            (identical(other.occasions, occasions) || const DeepCollectionEquality().equals(other.occasions, occasions)) &&
-            (identical(other.instructions, instructions) || const DeepCollectionEquality().equals(other.instructions, instructions)) &&
-            (identical(other.analyzedInstructions, analyzedInstructions) || const DeepCollectionEquality().equals(other.analyzedInstructions, analyzedInstructions)) &&
-            (identical(other.originalId, originalId) || const DeepCollectionEquality().equals(other.originalId, originalId)) &&
-            (identical(other.spoonacularSourceUrl, spoonacularSourceUrl) || const DeepCollectionEquality().equals(other.spoonacularSourceUrl, spoonacularSourceUrl)));
+                other.servings == servings) &&
+            (identical(other.sourceUrl, sourceUrl) ||
+                other.sourceUrl == sourceUrl) &&
+            (identical(other.image, image) || other.image == image) &&
+            (identical(other.imageType, imageType) ||
+                other.imageType == imageType) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            const DeepCollectionEquality().equals(other._cuisines, _cuisines) &&
+            const DeepCollectionEquality()
+                .equals(other._dishTypes, _dishTypes) &&
+            const DeepCollectionEquality().equals(other._diets, _diets) &&
+            const DeepCollectionEquality()
+                .equals(other._occasions, _occasions) &&
+            (identical(other.instructions, instructions) ||
+                other.instructions == instructions) &&
+            const DeepCollectionEquality()
+                .equals(other._analyzedInstructions, _analyzedInstructions) &&
+            const DeepCollectionEquality()
+                .equals(other.originalId, originalId) &&
+            (identical(other.spoonacularSourceUrl, spoonacularSourceUrl) ||
+                other.spoonacularSourceUrl == spoonacularSourceUrl));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(vegetarian) ^
-      const DeepCollectionEquality().hash(vegan) ^
-      const DeepCollectionEquality().hash(glutenFree) ^
-      const DeepCollectionEquality().hash(dairyFree) ^
-      const DeepCollectionEquality().hash(veryHealthy) ^
-      const DeepCollectionEquality().hash(cheap) ^
-      const DeepCollectionEquality().hash(veryPopular) ^
-      const DeepCollectionEquality().hash(sustainable) ^
-      const DeepCollectionEquality().hash(weightWatcherSmartPoints) ^
-      const DeepCollectionEquality().hash(gaps) ^
-      const DeepCollectionEquality().hash(lowFodmap) ^
-      const DeepCollectionEquality().hash(aggregateLikes) ^
-      const DeepCollectionEquality().hash(healthScore) ^
-      const DeepCollectionEquality().hash(creditsText) ^
-      const DeepCollectionEquality().hash(license) ^
-      const DeepCollectionEquality().hash(sourceName) ^
-      const DeepCollectionEquality().hash(extendedIngredients) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(title) ^
-      const DeepCollectionEquality().hash(readyInMinutes) ^
-      const DeepCollectionEquality().hash(servings) ^
-      const DeepCollectionEquality().hash(sourceUrl) ^
-      const DeepCollectionEquality().hash(image) ^
-      const DeepCollectionEquality().hash(imageType) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(cuisines) ^
-      const DeepCollectionEquality().hash(dishTypes) ^
-      const DeepCollectionEquality().hash(diets) ^
-      const DeepCollectionEquality().hash(occasions) ^
-      const DeepCollectionEquality().hash(instructions) ^
-      const DeepCollectionEquality().hash(analyzedInstructions) ^
-      const DeepCollectionEquality().hash(originalId) ^
-      const DeepCollectionEquality().hash(spoonacularSourceUrl);
 
   @JsonKey(ignore: true)
   @override
-  _$ResRecipeInfoCopyWith<_ResRecipeInfo> get copyWith =>
-      __$ResRecipeInfoCopyWithImpl<_ResRecipeInfo>(this, _$identity);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        vegetarian,
+        vegan,
+        glutenFree,
+        dairyFree,
+        veryHealthy,
+        cheap,
+        veryPopular,
+        sustainable,
+        weightWatcherSmartPoints,
+        gaps,
+        lowFodmap,
+        aggregateLikes,
+        healthScore,
+        creditsText,
+        license,
+        sourceName,
+        const DeepCollectionEquality().hash(_extendedIngredients),
+        id,
+        title,
+        readyInMinutes,
+        servings,
+        sourceUrl,
+        image,
+        imageType,
+        summary,
+        const DeepCollectionEquality().hash(_cuisines),
+        const DeepCollectionEquality().hash(_dishTypes),
+        const DeepCollectionEquality().hash(_diets),
+        const DeepCollectionEquality().hash(_occasions),
+        instructions,
+        const DeepCollectionEquality().hash(_analyzedInstructions),
+        const DeepCollectionEquality().hash(originalId),
+        spoonacularSourceUrl
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ResRecipeInfoImplCopyWith<_$ResRecipeInfoImpl> get copyWith =>
+      __$$ResRecipeInfoImplCopyWithImpl<_$ResRecipeInfoImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResRecipeInfoToJson(this);
+    return _$$ResRecipeInfoImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _ResRecipeInfo implements ResRecipeInfo {
   const factory _ResRecipeInfo(
-      {bool? vegetarian,
-      bool? vegan,
-      bool? glutenFree,
-      bool? dairyFree,
-      bool? veryHealthy,
-      bool? cheap,
-      bool? veryPopular,
-      bool? sustainable,
-      int? weightWatcherSmartPoints,
-      String? gaps,
-      bool? lowFodmap,
-      int? aggregateLikes,
-      double? healthScore,
-      String? creditsText,
-      String? license,
-      String? sourceName,
-      required List<ExtendedIngredient> extendedIngredients,
-      int? id,
-      String? title,
-      int? readyInMinutes,
-      int? servings,
-      String? sourceUrl,
-      String? image,
-      String? imageType,
-      String? summary,
-      required List<dynamic> cuisines,
-      required List<String> dishTypes,
-      required List<String> diets,
-      required List<dynamic> occasions,
-      String? instructions,
-      required List<AnalysedInstructions> analyzedInstructions,
-      dynamic? originalId,
-      String? spoonacularSourceUrl}) = _$_ResRecipeInfo;
+      {final bool? vegetarian,
+      final bool? vegan,
+      final bool? glutenFree,
+      final bool? dairyFree,
+      final bool? veryHealthy,
+      final bool? cheap,
+      final bool? veryPopular,
+      final bool? sustainable,
+      final int? weightWatcherSmartPoints,
+      final String? gaps,
+      final bool? lowFodmap,
+      final int? aggregateLikes,
+      final double? healthScore,
+      final String? creditsText,
+      final String? license,
+      final String? sourceName,
+      final List<ExtendedIngredient>? extendedIngredients,
+      final int? id,
+      final String? title,
+      final int? readyInMinutes,
+      final int? servings,
+      final String? sourceUrl,
+      final String? image,
+      final String? imageType,
+      final String? summary,
+      final List<String>? cuisines,
+      final List<String>? dishTypes,
+      final List<String>? diets,
+      final List<String>? occasions,
+      final String? instructions,
+      final List<AnalysedInstructions>? analyzedInstructions,
+      final dynamic originalId,
+      final String? spoonacularSourceUrl}) = _$ResRecipeInfoImpl;
 
   factory _ResRecipeInfo.fromJson(Map<String, dynamic> json) =
-      _$_ResRecipeInfo.fromJson;
+      _$ResRecipeInfoImpl.fromJson;
 
   @override
-  bool? get vegetarian => throw _privateConstructorUsedError;
+  bool? get vegetarian;
   @override
-  bool? get vegan => throw _privateConstructorUsedError;
+  bool? get vegan;
   @override
-  bool? get glutenFree => throw _privateConstructorUsedError;
+  bool? get glutenFree;
   @override
-  bool? get dairyFree => throw _privateConstructorUsedError;
+  bool? get dairyFree;
   @override
-  bool? get veryHealthy => throw _privateConstructorUsedError;
+  bool? get veryHealthy;
   @override
-  bool? get cheap => throw _privateConstructorUsedError;
+  bool? get cheap;
   @override
-  bool? get veryPopular => throw _privateConstructorUsedError;
+  bool? get veryPopular;
   @override
-  bool? get sustainable => throw _privateConstructorUsedError;
+  bool? get sustainable;
   @override
-  int? get weightWatcherSmartPoints => throw _privateConstructorUsedError;
+  int? get weightWatcherSmartPoints;
   @override
-  String? get gaps => throw _privateConstructorUsedError;
+  String? get gaps;
   @override
-  bool? get lowFodmap => throw _privateConstructorUsedError;
+  bool? get lowFodmap;
   @override
-  int? get aggregateLikes => throw _privateConstructorUsedError;
+  int? get aggregateLikes;
   @override
-  double? get healthScore => throw _privateConstructorUsedError;
+  double? get healthScore;
   @override
-  String? get creditsText => throw _privateConstructorUsedError;
+  String? get creditsText;
   @override
-  String? get license => throw _privateConstructorUsedError;
+  String? get license;
   @override
-  String? get sourceName => throw _privateConstructorUsedError;
+  String? get sourceName;
   @override
-  List<ExtendedIngredient> get extendedIngredients =>
-      throw _privateConstructorUsedError;
+  List<ExtendedIngredient>? get extendedIngredients;
   @override
-  int? get id => throw _privateConstructorUsedError;
+  int? get id;
   @override
-  String? get title => throw _privateConstructorUsedError;
+  String? get title;
   @override
-  int? get readyInMinutes => throw _privateConstructorUsedError;
+  int? get readyInMinutes;
   @override
-  int? get servings => throw _privateConstructorUsedError;
+  int? get servings;
   @override
-  String? get sourceUrl => throw _privateConstructorUsedError;
+  String? get sourceUrl;
   @override
-  String? get image => throw _privateConstructorUsedError;
+  String? get image;
   @override
-  String? get imageType => throw _privateConstructorUsedError;
+  String? get imageType;
   @override
-  String? get summary => throw _privateConstructorUsedError;
+  String? get summary;
   @override
-  List<dynamic> get cuisines => throw _privateConstructorUsedError;
+  List<String>? get cuisines;
   @override
-  List<String> get dishTypes => throw _privateConstructorUsedError;
+  List<String>? get dishTypes;
   @override
-  List<String> get diets => throw _privateConstructorUsedError;
+  List<String>? get diets;
   @override
-  List<dynamic> get occasions => throw _privateConstructorUsedError;
+  List<String>? get occasions;
   @override
-  String? get instructions => throw _privateConstructorUsedError;
+  String? get instructions;
   @override
-  List<AnalysedInstructions> get analyzedInstructions =>
-      throw _privateConstructorUsedError;
+  List<AnalysedInstructions>? get analyzedInstructions;
   @override
-  dynamic? get originalId => throw _privateConstructorUsedError;
+  dynamic get originalId;
   @override
-  String? get spoonacularSourceUrl => throw _privateConstructorUsedError;
+  String? get spoonacularSourceUrl;
   @override
   @JsonKey(ignore: true)
-  _$ResRecipeInfoCopyWith<_ResRecipeInfo> get copyWith =>
+  _$$ResRecipeInfoImplCopyWith<_$ResRecipeInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 ExtendedIngredient _$ExtendedIngredientFromJson(Map<String, dynamic> json) {
   return _ExtendedIngredient.fromJson(json);
 }
-
-/// @nodoc
-class _$ExtendedIngredientTearOff {
-  const _$ExtendedIngredientTearOff();
-
-  _ExtendedIngredient call(
-      {int? id,
-      String? aisle,
-      String? image,
-      String? consistency,
-      String? name,
-      String? nameClean,
-      String? original,
-      String? originalString,
-      String? originalName,
-      double? amount,
-      String? unit,
-      required List<String> meta,
-      required List<String> metaInformation}) {
-    return _ExtendedIngredient(
-      id: id,
-      aisle: aisle,
-      image: image,
-      consistency: consistency,
-      name: name,
-      nameClean: nameClean,
-      original: original,
-      originalString: originalString,
-      originalName: originalName,
-      amount: amount,
-      unit: unit,
-      meta: meta,
-      metaInformation: metaInformation,
-    );
-  }
-
-  ExtendedIngredient fromJson(Map<String, Object> json) {
-    return ExtendedIngredient.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ExtendedIngredient = _$ExtendedIngredientTearOff();
 
 /// @nodoc
 mixin _$ExtendedIngredient {
@@ -1004,8 +928,8 @@ mixin _$ExtendedIngredient {
   String? get originalName => throw _privateConstructorUsedError;
   double? get amount => throw _privateConstructorUsedError;
   String? get unit => throw _privateConstructorUsedError;
-  List<String> get meta => throw _privateConstructorUsedError;
-  List<String> get metaInformation => throw _privateConstructorUsedError;
+  List<String>? get meta => throw _privateConstructorUsedError;
+  List<String>? get metaInformation => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1017,7 +941,8 @@ mixin _$ExtendedIngredient {
 abstract class $ExtendedIngredientCopyWith<$Res> {
   factory $ExtendedIngredientCopyWith(
           ExtendedIngredient value, $Res Function(ExtendedIngredient) then) =
-      _$ExtendedIngredientCopyWithImpl<$Res>;
+      _$ExtendedIngredientCopyWithImpl<$Res, ExtendedIngredient>;
+  @useResult
   $Res call(
       {int? id,
       String? aisle,
@@ -1030,19 +955,21 @@ abstract class $ExtendedIngredientCopyWith<$Res> {
       String? originalName,
       double? amount,
       String? unit,
-      List<String> meta,
-      List<String> metaInformation});
+      List<String>? meta,
+      List<String>? metaInformation});
 }
 
 /// @nodoc
-class _$ExtendedIngredientCopyWithImpl<$Res>
+class _$ExtendedIngredientCopyWithImpl<$Res, $Val extends ExtendedIngredient>
     implements $ExtendedIngredientCopyWith<$Res> {
   _$ExtendedIngredientCopyWithImpl(this._value, this._then);
 
-  final ExtendedIngredient _value;
   // ignore: unused_field
-  final $Res Function(ExtendedIngredient) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -1060,69 +987,70 @@ class _$ExtendedIngredientCopyWithImpl<$Res>
     Object? metaInformation = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      aisle: aisle == freezed
+      aisle: freezed == aisle
           ? _value.aisle
           : aisle // ignore: cast_nullable_to_non_nullable
               as String?,
-      image: image == freezed
+      image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String?,
-      consistency: consistency == freezed
+      consistency: freezed == consistency
           ? _value.consistency
           : consistency // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      nameClean: nameClean == freezed
+      nameClean: freezed == nameClean
           ? _value.nameClean
           : nameClean // ignore: cast_nullable_to_non_nullable
               as String?,
-      original: original == freezed
+      original: freezed == original
           ? _value.original
           : original // ignore: cast_nullable_to_non_nullable
               as String?,
-      originalString: originalString == freezed
+      originalString: freezed == originalString
           ? _value.originalString
           : originalString // ignore: cast_nullable_to_non_nullable
               as String?,
-      originalName: originalName == freezed
+      originalName: freezed == originalName
           ? _value.originalName
           : originalName // ignore: cast_nullable_to_non_nullable
               as String?,
-      amount: amount == freezed
+      amount: freezed == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as double?,
-      unit: unit == freezed
+      unit: freezed == unit
           ? _value.unit
           : unit // ignore: cast_nullable_to_non_nullable
               as String?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      metaInformation: metaInformation == freezed
+              as List<String>?,
+      metaInformation: freezed == metaInformation
           ? _value.metaInformation
           : metaInformation // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-    ));
+              as List<String>?,
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ExtendedIngredientCopyWith<$Res>
+abstract class _$$ExtendedIngredientImplCopyWith<$Res>
     implements $ExtendedIngredientCopyWith<$Res> {
-  factory _$ExtendedIngredientCopyWith(
-          _ExtendedIngredient value, $Res Function(_ExtendedIngredient) then) =
-      __$ExtendedIngredientCopyWithImpl<$Res>;
+  factory _$$ExtendedIngredientImplCopyWith(_$ExtendedIngredientImpl value,
+          $Res Function(_$ExtendedIngredientImpl) then) =
+      __$$ExtendedIngredientImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int? id,
       String? aisle,
@@ -1135,21 +1063,19 @@ abstract class _$ExtendedIngredientCopyWith<$Res>
       String? originalName,
       double? amount,
       String? unit,
-      List<String> meta,
-      List<String> metaInformation});
+      List<String>? meta,
+      List<String>? metaInformation});
 }
 
 /// @nodoc
-class __$ExtendedIngredientCopyWithImpl<$Res>
-    extends _$ExtendedIngredientCopyWithImpl<$Res>
-    implements _$ExtendedIngredientCopyWith<$Res> {
-  __$ExtendedIngredientCopyWithImpl(
-      _ExtendedIngredient _value, $Res Function(_ExtendedIngredient) _then)
-      : super(_value, (v) => _then(v as _ExtendedIngredient));
+class __$$ExtendedIngredientImplCopyWithImpl<$Res>
+    extends _$ExtendedIngredientCopyWithImpl<$Res, _$ExtendedIngredientImpl>
+    implements _$$ExtendedIngredientImplCopyWith<$Res> {
+  __$$ExtendedIngredientImplCopyWithImpl(_$ExtendedIngredientImpl _value,
+      $Res Function(_$ExtendedIngredientImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _ExtendedIngredient get _value => super._value as _ExtendedIngredient;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -1166,67 +1092,67 @@ class __$ExtendedIngredientCopyWithImpl<$Res>
     Object? meta = freezed,
     Object? metaInformation = freezed,
   }) {
-    return _then(_ExtendedIngredient(
-      id: id == freezed
+    return _then(_$ExtendedIngredientImpl(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      aisle: aisle == freezed
+      aisle: freezed == aisle
           ? _value.aisle
           : aisle // ignore: cast_nullable_to_non_nullable
               as String?,
-      image: image == freezed
+      image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String?,
-      consistency: consistency == freezed
+      consistency: freezed == consistency
           ? _value.consistency
           : consistency // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      nameClean: nameClean == freezed
+      nameClean: freezed == nameClean
           ? _value.nameClean
           : nameClean // ignore: cast_nullable_to_non_nullable
               as String?,
-      original: original == freezed
+      original: freezed == original
           ? _value.original
           : original // ignore: cast_nullable_to_non_nullable
               as String?,
-      originalString: originalString == freezed
+      originalString: freezed == originalString
           ? _value.originalString
           : originalString // ignore: cast_nullable_to_non_nullable
               as String?,
-      originalName: originalName == freezed
+      originalName: freezed == originalName
           ? _value.originalName
           : originalName // ignore: cast_nullable_to_non_nullable
               as String?,
-      amount: amount == freezed
+      amount: freezed == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as double?,
-      unit: unit == freezed
+      unit: freezed == unit
           ? _value.unit
           : unit // ignore: cast_nullable_to_non_nullable
               as String?,
-      meta: meta == freezed
-          ? _value.meta
+      meta: freezed == meta
+          ? _value._meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      metaInformation: metaInformation == freezed
-          ? _value.metaInformation
+              as List<String>?,
+      metaInformation: freezed == metaInformation
+          ? _value._metaInformation
           : metaInformation // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String>?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_ExtendedIngredient implements _ExtendedIngredient {
-  const _$_ExtendedIngredient(
+class _$ExtendedIngredientImpl implements _ExtendedIngredient {
+  const _$ExtendedIngredientImpl(
       {this.id,
       this.aisle,
       this.image,
@@ -1238,11 +1164,13 @@ class _$_ExtendedIngredient implements _ExtendedIngredient {
       this.originalName,
       this.amount,
       this.unit,
-      required this.meta,
-      required this.metaInformation});
+      required final List<String>? meta,
+      required final List<String>? metaInformation})
+      : _meta = meta,
+        _metaInformation = metaInformation;
 
-  factory _$_ExtendedIngredient.fromJson(Map<String, dynamic> json) =>
-      _$$_ExtendedIngredientFromJson(json);
+  factory _$ExtendedIngredientImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ExtendedIngredientImplFromJson(json);
 
   @override
   final int? id;
@@ -1266,10 +1194,25 @@ class _$_ExtendedIngredient implements _ExtendedIngredient {
   final double? amount;
   @override
   final String? unit;
+  final List<String>? _meta;
   @override
-  final List<String> meta;
+  List<String>? get meta {
+    final value = _meta;
+    if (value == null) return null;
+    if (_meta is EqualUnmodifiableListView) return _meta;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _metaInformation;
   @override
-  final List<String> metaInformation;
+  List<String>? get metaInformation {
+    final value = _metaInformation;
+    if (value == null) return null;
+    if (_metaInformation is EqualUnmodifiableListView) return _metaInformation;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -1277,119 +1220,112 @@ class _$_ExtendedIngredient implements _ExtendedIngredient {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _ExtendedIngredient &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.aisle, aisle) ||
-                const DeepCollectionEquality().equals(other.aisle, aisle)) &&
-            (identical(other.image, image) ||
-                const DeepCollectionEquality().equals(other.image, image)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$ExtendedIngredientImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.aisle, aisle) || other.aisle == aisle) &&
+            (identical(other.image, image) || other.image == image) &&
             (identical(other.consistency, consistency) ||
-                const DeepCollectionEquality()
-                    .equals(other.consistency, consistency)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
+                other.consistency == consistency) &&
+            (identical(other.name, name) || other.name == name) &&
             (identical(other.nameClean, nameClean) ||
-                const DeepCollectionEquality()
-                    .equals(other.nameClean, nameClean)) &&
+                other.nameClean == nameClean) &&
             (identical(other.original, original) ||
-                const DeepCollectionEquality()
-                    .equals(other.original, original)) &&
+                other.original == original) &&
             (identical(other.originalString, originalString) ||
-                const DeepCollectionEquality()
-                    .equals(other.originalString, originalString)) &&
+                other.originalString == originalString) &&
             (identical(other.originalName, originalName) ||
-                const DeepCollectionEquality()
-                    .equals(other.originalName, originalName)) &&
-            (identical(other.amount, amount) ||
-                const DeepCollectionEquality().equals(other.amount, amount)) &&
-            (identical(other.unit, unit) ||
-                const DeepCollectionEquality().equals(other.unit, unit)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
-            (identical(other.metaInformation, metaInformation) ||
-                const DeepCollectionEquality()
-                    .equals(other.metaInformation, metaInformation)));
+                other.originalName == originalName) &&
+            (identical(other.amount, amount) || other.amount == amount) &&
+            (identical(other.unit, unit) || other.unit == unit) &&
+            const DeepCollectionEquality().equals(other._meta, _meta) &&
+            const DeepCollectionEquality()
+                .equals(other._metaInformation, _metaInformation));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(aisle) ^
-      const DeepCollectionEquality().hash(image) ^
-      const DeepCollectionEquality().hash(consistency) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(nameClean) ^
-      const DeepCollectionEquality().hash(original) ^
-      const DeepCollectionEquality().hash(originalString) ^
-      const DeepCollectionEquality().hash(originalName) ^
-      const DeepCollectionEquality().hash(amount) ^
-      const DeepCollectionEquality().hash(unit) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(metaInformation);
 
   @JsonKey(ignore: true)
   @override
-  _$ExtendedIngredientCopyWith<_ExtendedIngredient> get copyWith =>
-      __$ExtendedIngredientCopyWithImpl<_ExtendedIngredient>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      aisle,
+      image,
+      consistency,
+      name,
+      nameClean,
+      original,
+      originalString,
+      originalName,
+      amount,
+      unit,
+      const DeepCollectionEquality().hash(_meta),
+      const DeepCollectionEquality().hash(_metaInformation));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ExtendedIngredientImplCopyWith<_$ExtendedIngredientImpl> get copyWith =>
+      __$$ExtendedIngredientImplCopyWithImpl<_$ExtendedIngredientImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExtendedIngredientToJson(this);
+    return _$$ExtendedIngredientImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _ExtendedIngredient implements ExtendedIngredient {
   const factory _ExtendedIngredient(
-      {int? id,
-      String? aisle,
-      String? image,
-      String? consistency,
-      String? name,
-      String? nameClean,
-      String? original,
-      String? originalString,
-      String? originalName,
-      double? amount,
-      String? unit,
-      required List<String> meta,
-      required List<String> metaInformation}) = _$_ExtendedIngredient;
+      {final int? id,
+      final String? aisle,
+      final String? image,
+      final String? consistency,
+      final String? name,
+      final String? nameClean,
+      final String? original,
+      final String? originalString,
+      final String? originalName,
+      final double? amount,
+      final String? unit,
+      required final List<String>? meta,
+      required final List<String>? metaInformation}) = _$ExtendedIngredientImpl;
 
   factory _ExtendedIngredient.fromJson(Map<String, dynamic> json) =
-      _$_ExtendedIngredient.fromJson;
+      _$ExtendedIngredientImpl.fromJson;
 
   @override
-  int? get id => throw _privateConstructorUsedError;
+  int? get id;
   @override
-  String? get aisle => throw _privateConstructorUsedError;
+  String? get aisle;
   @override
-  String? get image => throw _privateConstructorUsedError;
+  String? get image;
   @override
-  String? get consistency => throw _privateConstructorUsedError;
+  String? get consistency;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
-  String? get nameClean => throw _privateConstructorUsedError;
+  String? get nameClean;
   @override
-  String? get original => throw _privateConstructorUsedError;
+  String? get original;
   @override
-  String? get originalString => throw _privateConstructorUsedError;
+  String? get originalString;
   @override
-  String? get originalName => throw _privateConstructorUsedError;
+  String? get originalName;
   @override
-  double? get amount => throw _privateConstructorUsedError;
+  double? get amount;
   @override
-  String? get unit => throw _privateConstructorUsedError;
+  String? get unit;
   @override
-  List<String> get meta => throw _privateConstructorUsedError;
+  List<String>? get meta;
   @override
-  List<String> get metaInformation => throw _privateConstructorUsedError;
+  List<String>? get metaInformation;
   @override
   @JsonKey(ignore: true)
-  _$ExtendedIngredientCopyWith<_ExtendedIngredient> get copyWith =>
+  _$$ExtendedIngredientImplCopyWith<_$ExtendedIngredientImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1398,28 +1334,9 @@ AnalysedInstructions _$AnalysedInstructionsFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$AnalysedInstructionsTearOff {
-  const _$AnalysedInstructionsTearOff();
-
-  _AnalysedInstructions call({String? name, required List<Step> steps}) {
-    return _AnalysedInstructions(
-      name: name,
-      steps: steps,
-    );
-  }
-
-  AnalysedInstructions fromJson(Map<String, Object> json) {
-    return AnalysedInstructions.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AnalysedInstructions = _$AnalysedInstructionsTearOff();
-
-/// @nodoc
 mixin _$AnalysedInstructions {
   String? get name => throw _privateConstructorUsedError;
-  List<Step> get steps => throw _privateConstructorUsedError;
+  List<Step>? get steps => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1431,88 +1348,100 @@ mixin _$AnalysedInstructions {
 abstract class $AnalysedInstructionsCopyWith<$Res> {
   factory $AnalysedInstructionsCopyWith(AnalysedInstructions value,
           $Res Function(AnalysedInstructions) then) =
-      _$AnalysedInstructionsCopyWithImpl<$Res>;
-  $Res call({String? name, List<Step> steps});
+      _$AnalysedInstructionsCopyWithImpl<$Res, AnalysedInstructions>;
+  @useResult
+  $Res call({String? name, List<Step>? steps});
 }
 
 /// @nodoc
-class _$AnalysedInstructionsCopyWithImpl<$Res>
+class _$AnalysedInstructionsCopyWithImpl<$Res,
+        $Val extends AnalysedInstructions>
     implements $AnalysedInstructionsCopyWith<$Res> {
   _$AnalysedInstructionsCopyWithImpl(this._value, this._then);
 
-  final AnalysedInstructions _value;
   // ignore: unused_field
-  final $Res Function(AnalysedInstructions) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? name = freezed,
     Object? steps = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      steps: steps == freezed
+      steps: freezed == steps
           ? _value.steps
           : steps // ignore: cast_nullable_to_non_nullable
-              as List<Step>,
-    ));
+              as List<Step>?,
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$AnalysedInstructionsCopyWith<$Res>
+abstract class _$$AnalysedInstructionsImplCopyWith<$Res>
     implements $AnalysedInstructionsCopyWith<$Res> {
-  factory _$AnalysedInstructionsCopyWith(_AnalysedInstructions value,
-          $Res Function(_AnalysedInstructions) then) =
-      __$AnalysedInstructionsCopyWithImpl<$Res>;
+  factory _$$AnalysedInstructionsImplCopyWith(_$AnalysedInstructionsImpl value,
+          $Res Function(_$AnalysedInstructionsImpl) then) =
+      __$$AnalysedInstructionsImplCopyWithImpl<$Res>;
   @override
-  $Res call({String? name, List<Step> steps});
+  @useResult
+  $Res call({String? name, List<Step>? steps});
 }
 
 /// @nodoc
-class __$AnalysedInstructionsCopyWithImpl<$Res>
-    extends _$AnalysedInstructionsCopyWithImpl<$Res>
-    implements _$AnalysedInstructionsCopyWith<$Res> {
-  __$AnalysedInstructionsCopyWithImpl(
-      _AnalysedInstructions _value, $Res Function(_AnalysedInstructions) _then)
-      : super(_value, (v) => _then(v as _AnalysedInstructions));
+class __$$AnalysedInstructionsImplCopyWithImpl<$Res>
+    extends _$AnalysedInstructionsCopyWithImpl<$Res, _$AnalysedInstructionsImpl>
+    implements _$$AnalysedInstructionsImplCopyWith<$Res> {
+  __$$AnalysedInstructionsImplCopyWithImpl(_$AnalysedInstructionsImpl _value,
+      $Res Function(_$AnalysedInstructionsImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _AnalysedInstructions get _value => super._value as _AnalysedInstructions;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? name = freezed,
     Object? steps = freezed,
   }) {
-    return _then(_AnalysedInstructions(
-      name: name == freezed
+    return _then(_$AnalysedInstructionsImpl(
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      steps: steps == freezed
-          ? _value.steps
+      steps: freezed == steps
+          ? _value._steps
           : steps // ignore: cast_nullable_to_non_nullable
-              as List<Step>,
+              as List<Step>?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_AnalysedInstructions implements _AnalysedInstructions {
-  const _$_AnalysedInstructions({this.name, required this.steps});
+class _$AnalysedInstructionsImpl implements _AnalysedInstructions {
+  const _$AnalysedInstructionsImpl(
+      {this.name, required final List<Step>? steps})
+      : _steps = steps;
 
-  factory _$_AnalysedInstructions.fromJson(Map<String, dynamic> json) =>
-      _$$_AnalysedInstructionsFromJson(json);
+  factory _$AnalysedInstructionsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AnalysedInstructionsImplFromJson(json);
 
   @override
   final String? name;
+  final List<Step>? _steps;
   @override
-  final List<Step> steps;
+  List<Step>? get steps {
+    final value = _steps;
+    if (value == null) return null;
+    if (_steps is EqualUnmodifiableListView) return _steps;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -1520,48 +1449,51 @@ class _$_AnalysedInstructions implements _AnalysedInstructions {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _AnalysedInstructions &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.steps, steps) ||
-                const DeepCollectionEquality().equals(other.steps, steps)));
+        (other.runtimeType == runtimeType &&
+            other is _$AnalysedInstructionsImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            const DeepCollectionEquality().equals(other._steps, _steps));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(steps);
 
   @JsonKey(ignore: true)
   @override
-  _$AnalysedInstructionsCopyWith<_AnalysedInstructions> get copyWith =>
-      __$AnalysedInstructionsCopyWithImpl<_AnalysedInstructions>(
-          this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType, name, const DeepCollectionEquality().hash(_steps));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AnalysedInstructionsImplCopyWith<_$AnalysedInstructionsImpl>
+      get copyWith =>
+          __$$AnalysedInstructionsImplCopyWithImpl<_$AnalysedInstructionsImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AnalysedInstructionsToJson(this);
+    return _$$AnalysedInstructionsImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _AnalysedInstructions implements AnalysedInstructions {
   const factory _AnalysedInstructions(
-      {String? name, required List<Step> steps}) = _$_AnalysedInstructions;
+      {final String? name,
+      required final List<Step>? steps}) = _$AnalysedInstructionsImpl;
 
   factory _AnalysedInstructions.fromJson(Map<String, dynamic> json) =
-      _$_AnalysedInstructions.fromJson;
+      _$AnalysedInstructionsImpl.fromJson;
 
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
-  List<Step> get steps => throw _privateConstructorUsedError;
+  List<Step>? get steps;
   @override
   @JsonKey(ignore: true)
-  _$AnalysedInstructionsCopyWith<_AnalysedInstructions> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AnalysedInstructionsImplCopyWith<_$AnalysedInstructionsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 Step _$StepFromJson(Map<String, dynamic> json) {
@@ -1569,36 +1501,11 @@ Step _$StepFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$StepTearOff {
-  const _$StepTearOff();
-
-  _Step call(
-      {int? number,
-      String? step,
-      required List<Ent> ingredients,
-      required List<Ent> equipment}) {
-    return _Step(
-      number: number,
-      step: step,
-      ingredients: ingredients,
-      equipment: equipment,
-    );
-  }
-
-  Step fromJson(Map<String, Object> json) {
-    return Step.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Step = _$StepTearOff();
-
-/// @nodoc
 mixin _$Step {
   int? get number => throw _privateConstructorUsedError;
   String? get step => throw _privateConstructorUsedError;
-  List<Ent> get ingredients => throw _privateConstructorUsedError;
-  List<Ent> get equipment => throw _privateConstructorUsedError;
+  List<Ent>? get ingredients => throw _privateConstructorUsedError;
+  List<Ent>? get equipment => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1608,19 +1515,26 @@ mixin _$Step {
 /// @nodoc
 abstract class $StepCopyWith<$Res> {
   factory $StepCopyWith(Step value, $Res Function(Step) then) =
-      _$StepCopyWithImpl<$Res>;
+      _$StepCopyWithImpl<$Res, Step>;
+  @useResult
   $Res call(
-      {int? number, String? step, List<Ent> ingredients, List<Ent> equipment});
+      {int? number,
+      String? step,
+      List<Ent>? ingredients,
+      List<Ent>? equipment});
 }
 
 /// @nodoc
-class _$StepCopyWithImpl<$Res> implements $StepCopyWith<$Res> {
+class _$StepCopyWithImpl<$Res, $Val extends Step>
+    implements $StepCopyWith<$Res> {
   _$StepCopyWithImpl(this._value, this._then);
 
-  final Step _value;
   // ignore: unused_field
-  final $Res Function(Step) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? number = freezed,
@@ -1629,44 +1543,48 @@ class _$StepCopyWithImpl<$Res> implements $StepCopyWith<$Res> {
     Object? equipment = freezed,
   }) {
     return _then(_value.copyWith(
-      number: number == freezed
+      number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
               as int?,
-      step: step == freezed
+      step: freezed == step
           ? _value.step
           : step // ignore: cast_nullable_to_non_nullable
               as String?,
-      ingredients: ingredients == freezed
+      ingredients: freezed == ingredients
           ? _value.ingredients
           : ingredients // ignore: cast_nullable_to_non_nullable
-              as List<Ent>,
-      equipment: equipment == freezed
+              as List<Ent>?,
+      equipment: freezed == equipment
           ? _value.equipment
           : equipment // ignore: cast_nullable_to_non_nullable
-              as List<Ent>,
-    ));
+              as List<Ent>?,
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$StepCopyWith<$Res> implements $StepCopyWith<$Res> {
-  factory _$StepCopyWith(_Step value, $Res Function(_Step) then) =
-      __$StepCopyWithImpl<$Res>;
+abstract class _$$StepImplCopyWith<$Res> implements $StepCopyWith<$Res> {
+  factory _$$StepImplCopyWith(
+          _$StepImpl value, $Res Function(_$StepImpl) then) =
+      __$$StepImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
-      {int? number, String? step, List<Ent> ingredients, List<Ent> equipment});
+      {int? number,
+      String? step,
+      List<Ent>? ingredients,
+      List<Ent>? equipment});
 }
 
 /// @nodoc
-class __$StepCopyWithImpl<$Res> extends _$StepCopyWithImpl<$Res>
-    implements _$StepCopyWith<$Res> {
-  __$StepCopyWithImpl(_Step _value, $Res Function(_Step) _then)
-      : super(_value, (v) => _then(v as _Step));
+class __$$StepImplCopyWithImpl<$Res>
+    extends _$StepCopyWithImpl<$Res, _$StepImpl>
+    implements _$$StepImplCopyWith<$Res> {
+  __$$StepImplCopyWithImpl(_$StepImpl _value, $Res Function(_$StepImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _Step get _value => super._value as _Step;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? number = freezed,
@@ -1674,46 +1592,64 @@ class __$StepCopyWithImpl<$Res> extends _$StepCopyWithImpl<$Res>
     Object? ingredients = freezed,
     Object? equipment = freezed,
   }) {
-    return _then(_Step(
-      number: number == freezed
+    return _then(_$StepImpl(
+      number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
               as int?,
-      step: step == freezed
+      step: freezed == step
           ? _value.step
           : step // ignore: cast_nullable_to_non_nullable
               as String?,
-      ingredients: ingredients == freezed
-          ? _value.ingredients
+      ingredients: freezed == ingredients
+          ? _value._ingredients
           : ingredients // ignore: cast_nullable_to_non_nullable
-              as List<Ent>,
-      equipment: equipment == freezed
-          ? _value.equipment
+              as List<Ent>?,
+      equipment: freezed == equipment
+          ? _value._equipment
           : equipment // ignore: cast_nullable_to_non_nullable
-              as List<Ent>,
+              as List<Ent>?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Step implements _Step {
-  const _$_Step(
+class _$StepImpl implements _Step {
+  const _$StepImpl(
       {this.number,
       this.step,
-      required this.ingredients,
-      required this.equipment});
+      required final List<Ent>? ingredients,
+      required final List<Ent>? equipment})
+      : _ingredients = ingredients,
+        _equipment = equipment;
 
-  factory _$_Step.fromJson(Map<String, dynamic> json) => _$$_StepFromJson(json);
+  factory _$StepImpl.fromJson(Map<String, dynamic> json) =>
+      _$$StepImplFromJson(json);
 
   @override
   final int? number;
   @override
   final String? step;
+  final List<Ent>? _ingredients;
   @override
-  final List<Ent> ingredients;
+  List<Ent>? get ingredients {
+    final value = _ingredients;
+    if (value == null) return null;
+    if (_ingredients is EqualUnmodifiableListView) return _ingredients;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Ent>? _equipment;
   @override
-  final List<Ent> equipment;
+  List<Ent>? get equipment {
+    final value = _equipment;
+    if (value == null) return null;
+    if (_equipment is EqualUnmodifiableListView) return _equipment;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -1721,86 +1657,67 @@ class _$_Step implements _Step {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _Step &&
-            (identical(other.number, number) ||
-                const DeepCollectionEquality().equals(other.number, number)) &&
-            (identical(other.step, step) ||
-                const DeepCollectionEquality().equals(other.step, step)) &&
-            (identical(other.ingredients, ingredients) ||
-                const DeepCollectionEquality()
-                    .equals(other.ingredients, ingredients)) &&
-            (identical(other.equipment, equipment) ||
-                const DeepCollectionEquality()
-                    .equals(other.equipment, equipment)));
+        (other.runtimeType == runtimeType &&
+            other is _$StepImpl &&
+            (identical(other.number, number) || other.number == number) &&
+            (identical(other.step, step) || other.step == step) &&
+            const DeepCollectionEquality()
+                .equals(other._ingredients, _ingredients) &&
+            const DeepCollectionEquality()
+                .equals(other._equipment, _equipment));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(number) ^
-      const DeepCollectionEquality().hash(step) ^
-      const DeepCollectionEquality().hash(ingredients) ^
-      const DeepCollectionEquality().hash(equipment);
 
   @JsonKey(ignore: true)
   @override
-  _$StepCopyWith<_Step> get copyWith =>
-      __$StepCopyWithImpl<_Step>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      number,
+      step,
+      const DeepCollectionEquality().hash(_ingredients),
+      const DeepCollectionEquality().hash(_equipment));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$StepImplCopyWith<_$StepImpl> get copyWith =>
+      __$$StepImplCopyWithImpl<_$StepImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StepToJson(this);
+    return _$$StepImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Step implements Step {
   const factory _Step(
-      {int? number,
-      String? step,
-      required List<Ent> ingredients,
-      required List<Ent> equipment}) = _$_Step;
+      {final int? number,
+      final String? step,
+      required final List<Ent>? ingredients,
+      required final List<Ent>? equipment}) = _$StepImpl;
 
-  factory _Step.fromJson(Map<String, dynamic> json) = _$_Step.fromJson;
+  factory _Step.fromJson(Map<String, dynamic> json) = _$StepImpl.fromJson;
 
   @override
-  int? get number => throw _privateConstructorUsedError;
+  int? get number;
   @override
-  String? get step => throw _privateConstructorUsedError;
+  String? get step;
   @override
-  List<Ent> get ingredients => throw _privateConstructorUsedError;
+  List<Ent>? get ingredients;
   @override
-  List<Ent> get equipment => throw _privateConstructorUsedError;
+  List<Ent>? get equipment;
   @override
   @JsonKey(ignore: true)
-  _$StepCopyWith<_Step> get copyWith => throw _privateConstructorUsedError;
+  _$$StepImplCopyWith<_$StepImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Ent _$EntFromJson(Map<String, dynamic> json) {
   return _Ent.fromJson(json);
 }
-
-/// @nodoc
-class _$EntTearOff {
-  const _$EntTearOff();
-
-  _Ent call({int? id, String? name, String? localizedName, String? image}) {
-    return _Ent(
-      id: id,
-      name: name,
-      localizedName: localizedName,
-      image: image,
-    );
-  }
-
-  Ent fromJson(Map<String, Object> json) {
-    return Ent.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Ent = _$EntTearOff();
 
 /// @nodoc
 mixin _$Ent {
@@ -1817,18 +1734,21 @@ mixin _$Ent {
 /// @nodoc
 abstract class $EntCopyWith<$Res> {
   factory $EntCopyWith(Ent value, $Res Function(Ent) then) =
-      _$EntCopyWithImpl<$Res>;
+      _$EntCopyWithImpl<$Res, Ent>;
+  @useResult
   $Res call({int? id, String? name, String? localizedName, String? image});
 }
 
 /// @nodoc
-class _$EntCopyWithImpl<$Res> implements $EntCopyWith<$Res> {
+class _$EntCopyWithImpl<$Res, $Val extends Ent> implements $EntCopyWith<$Res> {
   _$EntCopyWithImpl(this._value, this._then);
 
-  final Ent _value;
   // ignore: unused_field
-  final $Res Function(Ent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -1837,43 +1757,42 @@ class _$EntCopyWithImpl<$Res> implements $EntCopyWith<$Res> {
     Object? image = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      localizedName: localizedName == freezed
+      localizedName: freezed == localizedName
           ? _value.localizedName
           : localizedName // ignore: cast_nullable_to_non_nullable
               as String?,
-      image: image == freezed
+      image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$EntCopyWith<$Res> implements $EntCopyWith<$Res> {
-  factory _$EntCopyWith(_Ent value, $Res Function(_Ent) then) =
-      __$EntCopyWithImpl<$Res>;
+abstract class _$$EntImplCopyWith<$Res> implements $EntCopyWith<$Res> {
+  factory _$$EntImplCopyWith(_$EntImpl value, $Res Function(_$EntImpl) then) =
+      __$$EntImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int? id, String? name, String? localizedName, String? image});
 }
 
 /// @nodoc
-class __$EntCopyWithImpl<$Res> extends _$EntCopyWithImpl<$Res>
-    implements _$EntCopyWith<$Res> {
-  __$EntCopyWithImpl(_Ent _value, $Res Function(_Ent) _then)
-      : super(_value, (v) => _then(v as _Ent));
+class __$$EntImplCopyWithImpl<$Res> extends _$EntCopyWithImpl<$Res, _$EntImpl>
+    implements _$$EntImplCopyWith<$Res> {
+  __$$EntImplCopyWithImpl(_$EntImpl _value, $Res Function(_$EntImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _Ent get _value => super._value as _Ent;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -1881,20 +1800,20 @@ class __$EntCopyWithImpl<$Res> extends _$EntCopyWithImpl<$Res>
     Object? localizedName = freezed,
     Object? image = freezed,
   }) {
-    return _then(_Ent(
-      id: id == freezed
+    return _then(_$EntImpl(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      localizedName: localizedName == freezed
+      localizedName: freezed == localizedName
           ? _value.localizedName
           : localizedName // ignore: cast_nullable_to_non_nullable
               as String?,
-      image: image == freezed
+      image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -1904,10 +1823,11 @@ class __$EntCopyWithImpl<$Res> extends _$EntCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Ent implements _Ent {
-  const _$_Ent({this.id, this.name, this.localizedName, this.image});
+class _$EntImpl implements _Ent {
+  const _$EntImpl({this.id, this.name, this.localizedName, this.image});
 
-  factory _$_Ent.fromJson(Map<String, dynamic> json) => _$$_EntFromJson(json);
+  factory _$EntImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EntImplFromJson(json);
 
   @override
   final int? id;
@@ -1924,80 +1844,61 @@ class _$_Ent implements _Ent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _Ent &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$EntImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name) &&
             (identical(other.localizedName, localizedName) ||
-                const DeepCollectionEquality()
-                    .equals(other.localizedName, localizedName)) &&
-            (identical(other.image, image) ||
-                const DeepCollectionEquality().equals(other.image, image)));
+                other.localizedName == localizedName) &&
+            (identical(other.image, image) || other.image == image));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(localizedName) ^
-      const DeepCollectionEquality().hash(image);
 
   @JsonKey(ignore: true)
   @override
-  _$EntCopyWith<_Ent> get copyWith =>
-      __$EntCopyWithImpl<_Ent>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, id, name, localizedName, image);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EntImplCopyWith<_$EntImpl> get copyWith =>
+      __$$EntImplCopyWithImpl<_$EntImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EntToJson(this);
+    return _$$EntImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Ent implements Ent {
   const factory _Ent(
-      {int? id, String? name, String? localizedName, String? image}) = _$_Ent;
+      {final int? id,
+      final String? name,
+      final String? localizedName,
+      final String? image}) = _$EntImpl;
 
-  factory _Ent.fromJson(Map<String, dynamic> json) = _$_Ent.fromJson;
+  factory _Ent.fromJson(Map<String, dynamic> json) = _$EntImpl.fromJson;
 
   @override
-  int? get id => throw _privateConstructorUsedError;
+  int? get id;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
-  String? get localizedName => throw _privateConstructorUsedError;
+  String? get localizedName;
   @override
-  String? get image => throw _privateConstructorUsedError;
+  String? get image;
   @override
   @JsonKey(ignore: true)
-  _$EntCopyWith<_Ent> get copyWith => throw _privateConstructorUsedError;
+  _$$EntImplCopyWith<_$EntImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Length _$LengthFromJson(Map<String, dynamic> json) {
   return _Length.fromJson(json);
 }
-
-/// @nodoc
-class _$LengthTearOff {
-  const _$LengthTearOff();
-
-  _Length call({int? number, String? unit}) {
-    return _Length(
-      number: number,
-      unit: unit,
-    );
-  }
-
-  Length fromJson(Map<String, Object> json) {
-    return Length.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Length = _$LengthTearOff();
 
 /// @nodoc
 mixin _$Length {
@@ -2012,64 +1913,70 @@ mixin _$Length {
 /// @nodoc
 abstract class $LengthCopyWith<$Res> {
   factory $LengthCopyWith(Length value, $Res Function(Length) then) =
-      _$LengthCopyWithImpl<$Res>;
+      _$LengthCopyWithImpl<$Res, Length>;
+  @useResult
   $Res call({int? number, String? unit});
 }
 
 /// @nodoc
-class _$LengthCopyWithImpl<$Res> implements $LengthCopyWith<$Res> {
+class _$LengthCopyWithImpl<$Res, $Val extends Length>
+    implements $LengthCopyWith<$Res> {
   _$LengthCopyWithImpl(this._value, this._then);
 
-  final Length _value;
   // ignore: unused_field
-  final $Res Function(Length) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? number = freezed,
     Object? unit = freezed,
   }) {
     return _then(_value.copyWith(
-      number: number == freezed
+      number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
               as int?,
-      unit: unit == freezed
+      unit: freezed == unit
           ? _value.unit
           : unit // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$LengthCopyWith<$Res> implements $LengthCopyWith<$Res> {
-  factory _$LengthCopyWith(_Length value, $Res Function(_Length) then) =
-      __$LengthCopyWithImpl<$Res>;
+abstract class _$$LengthImplCopyWith<$Res> implements $LengthCopyWith<$Res> {
+  factory _$$LengthImplCopyWith(
+          _$LengthImpl value, $Res Function(_$LengthImpl) then) =
+      __$$LengthImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int? number, String? unit});
 }
 
 /// @nodoc
-class __$LengthCopyWithImpl<$Res> extends _$LengthCopyWithImpl<$Res>
-    implements _$LengthCopyWith<$Res> {
-  __$LengthCopyWithImpl(_Length _value, $Res Function(_Length) _then)
-      : super(_value, (v) => _then(v as _Length));
+class __$$LengthImplCopyWithImpl<$Res>
+    extends _$LengthCopyWithImpl<$Res, _$LengthImpl>
+    implements _$$LengthImplCopyWith<$Res> {
+  __$$LengthImplCopyWithImpl(
+      _$LengthImpl _value, $Res Function(_$LengthImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _Length get _value => super._value as _Length;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? number = freezed,
     Object? unit = freezed,
   }) {
-    return _then(_Length(
-      number: number == freezed
+    return _then(_$LengthImpl(
+      number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
               as int?,
-      unit: unit == freezed
+      unit: freezed == unit
           ? _value.unit
           : unit // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -2079,11 +1986,11 @@ class __$LengthCopyWithImpl<$Res> extends _$LengthCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Length implements _Length {
-  const _$_Length({this.number, this.unit});
+class _$LengthImpl implements _Length {
+  const _$LengthImpl({this.number, this.unit});
 
-  factory _$_Length.fromJson(Map<String, dynamic> json) =>
-      _$$_LengthFromJson(json);
+  factory _$LengthImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LengthImplFromJson(json);
 
   @override
   final int? number;
@@ -2096,42 +2003,43 @@ class _$_Length implements _Length {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _Length &&
-            (identical(other.number, number) ||
-                const DeepCollectionEquality().equals(other.number, number)) &&
-            (identical(other.unit, unit) ||
-                const DeepCollectionEquality().equals(other.unit, unit)));
+        (other.runtimeType == runtimeType &&
+            other is _$LengthImpl &&
+            (identical(other.number, number) || other.number == number) &&
+            (identical(other.unit, unit) || other.unit == unit));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(number) ^
-      const DeepCollectionEquality().hash(unit);
 
   @JsonKey(ignore: true)
   @override
-  _$LengthCopyWith<_Length> get copyWith =>
-      __$LengthCopyWithImpl<_Length>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, number, unit);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LengthImplCopyWith<_$LengthImpl> get copyWith =>
+      __$$LengthImplCopyWithImpl<_$LengthImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LengthToJson(this);
+    return _$$LengthImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Length implements Length {
-  const factory _Length({int? number, String? unit}) = _$_Length;
+  const factory _Length({final int? number, final String? unit}) = _$LengthImpl;
 
-  factory _Length.fromJson(Map<String, dynamic> json) = _$_Length.fromJson;
+  factory _Length.fromJson(Map<String, dynamic> json) = _$LengthImpl.fromJson;
 
   @override
-  int? get number => throw _privateConstructorUsedError;
+  int? get number;
   @override
-  String? get unit => throw _privateConstructorUsedError;
+  String? get unit;
   @override
   @JsonKey(ignore: true)
-  _$LengthCopyWith<_Length> get copyWith => throw _privateConstructorUsedError;
+  _$$LengthImplCopyWith<_$LengthImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

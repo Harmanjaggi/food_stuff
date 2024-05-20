@@ -4,7 +4,7 @@ import 'package:food_stuff/src/ui/search_result_page/search_result_page.dart';
 import 'package:food_stuff/src/utils/constants.dart';
 
 class FestivalSpecial extends HookWidget {
-  const FestivalSpecial({this.direction = true, Key? key}) : super(key: key);
+  const FestivalSpecial({this.direction = true, super.key});
   final bool direction;
   @override
   Widget build(BuildContext context) {

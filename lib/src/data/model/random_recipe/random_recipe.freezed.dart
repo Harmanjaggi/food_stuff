@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'random_recipe.dart';
 
@@ -11,29 +12,11 @@ part of 'random_recipe.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 RandomRecipe _$RandomRecipeFromJson(Map<String, dynamic> json) {
   return _RandomRecipe.fromJson(json);
 }
-
-/// @nodoc
-class _$RandomRecipeTearOff {
-  const _$RandomRecipeTearOff();
-
-  _RandomRecipe call({required List<Recipe> recipes}) {
-    return _RandomRecipe(
-      recipes: recipes,
-    );
-  }
-
-  RandomRecipe fromJson(Map<String, Object> json) {
-    return RandomRecipe.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $RandomRecipe = _$RandomRecipeTearOff();
 
 /// @nodoc
 mixin _$RandomRecipe {
@@ -49,58 +32,62 @@ mixin _$RandomRecipe {
 abstract class $RandomRecipeCopyWith<$Res> {
   factory $RandomRecipeCopyWith(
           RandomRecipe value, $Res Function(RandomRecipe) then) =
-      _$RandomRecipeCopyWithImpl<$Res>;
+      _$RandomRecipeCopyWithImpl<$Res, RandomRecipe>;
+  @useResult
   $Res call({List<Recipe> recipes});
 }
 
 /// @nodoc
-class _$RandomRecipeCopyWithImpl<$Res> implements $RandomRecipeCopyWith<$Res> {
+class _$RandomRecipeCopyWithImpl<$Res, $Val extends RandomRecipe>
+    implements $RandomRecipeCopyWith<$Res> {
   _$RandomRecipeCopyWithImpl(this._value, this._then);
 
-  final RandomRecipe _value;
   // ignore: unused_field
-  final $Res Function(RandomRecipe) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? recipes = freezed,
+    Object? recipes = null,
   }) {
     return _then(_value.copyWith(
-      recipes: recipes == freezed
+      recipes: null == recipes
           ? _value.recipes
           : recipes // ignore: cast_nullable_to_non_nullable
               as List<Recipe>,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$RandomRecipeCopyWith<$Res>
+abstract class _$$RandomRecipeImplCopyWith<$Res>
     implements $RandomRecipeCopyWith<$Res> {
-  factory _$RandomRecipeCopyWith(
-          _RandomRecipe value, $Res Function(_RandomRecipe) then) =
-      __$RandomRecipeCopyWithImpl<$Res>;
+  factory _$$RandomRecipeImplCopyWith(
+          _$RandomRecipeImpl value, $Res Function(_$RandomRecipeImpl) then) =
+      __$$RandomRecipeImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({List<Recipe> recipes});
 }
 
 /// @nodoc
-class __$RandomRecipeCopyWithImpl<$Res> extends _$RandomRecipeCopyWithImpl<$Res>
-    implements _$RandomRecipeCopyWith<$Res> {
-  __$RandomRecipeCopyWithImpl(
-      _RandomRecipe _value, $Res Function(_RandomRecipe) _then)
-      : super(_value, (v) => _then(v as _RandomRecipe));
+class __$$RandomRecipeImplCopyWithImpl<$Res>
+    extends _$RandomRecipeCopyWithImpl<$Res, _$RandomRecipeImpl>
+    implements _$$RandomRecipeImplCopyWith<$Res> {
+  __$$RandomRecipeImplCopyWithImpl(
+      _$RandomRecipeImpl _value, $Res Function(_$RandomRecipeImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _RandomRecipe get _value => super._value as _RandomRecipe;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? recipes = freezed,
+    Object? recipes = null,
   }) {
-    return _then(_RandomRecipe(
-      recipes: recipes == freezed
-          ? _value.recipes
+    return _then(_$RandomRecipeImpl(
+      recipes: null == recipes
+          ? _value._recipes
           : recipes // ignore: cast_nullable_to_non_nullable
               as List<Recipe>,
     ));
@@ -109,14 +96,20 @@ class __$RandomRecipeCopyWithImpl<$Res> extends _$RandomRecipeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_RandomRecipe implements _RandomRecipe {
-  const _$_RandomRecipe({required this.recipes});
+class _$RandomRecipeImpl implements _RandomRecipe {
+  const _$RandomRecipeImpl({required final List<Recipe> recipes})
+      : _recipes = recipes;
 
-  factory _$_RandomRecipe.fromJson(Map<String, dynamic> json) =>
-      _$$_RandomRecipeFromJson(json);
+  factory _$RandomRecipeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RandomRecipeImplFromJson(json);
 
+  final List<Recipe> _recipes;
   @override
-  final List<Recipe> recipes;
+  List<Recipe> get recipes {
+    if (_recipes is EqualUnmodifiableListView) return _recipes;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_recipes);
+  }
 
   @override
   String toString() {
@@ -124,101 +117,50 @@ class _$_RandomRecipe implements _RandomRecipe {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _RandomRecipe &&
-            (identical(other.recipes, recipes) ||
-                const DeepCollectionEquality().equals(other.recipes, recipes)));
+        (other.runtimeType == runtimeType &&
+            other is _$RandomRecipeImpl &&
+            const DeepCollectionEquality().equals(other._recipes, _recipes));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(recipes);
 
   @JsonKey(ignore: true)
   @override
-  _$RandomRecipeCopyWith<_RandomRecipe> get copyWith =>
-      __$RandomRecipeCopyWithImpl<_RandomRecipe>(this, _$identity);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_recipes));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$RandomRecipeImplCopyWith<_$RandomRecipeImpl> get copyWith =>
+      __$$RandomRecipeImplCopyWithImpl<_$RandomRecipeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RandomRecipeToJson(this);
+    return _$$RandomRecipeImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _RandomRecipe implements RandomRecipe {
-  const factory _RandomRecipe({required List<Recipe> recipes}) =
-      _$_RandomRecipe;
+  const factory _RandomRecipe({required final List<Recipe> recipes}) =
+      _$RandomRecipeImpl;
 
   factory _RandomRecipe.fromJson(Map<String, dynamic> json) =
-      _$_RandomRecipe.fromJson;
+      _$RandomRecipeImpl.fromJson;
 
   @override
-  List<Recipe> get recipes => throw _privateConstructorUsedError;
+  List<Recipe> get recipes;
   @override
   @JsonKey(ignore: true)
-  _$RandomRecipeCopyWith<_RandomRecipe> get copyWith =>
+  _$$RandomRecipeImplCopyWith<_$RandomRecipeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 Recipe _$RecipeFromJson(Map<String, dynamic> json) {
   return _Recipe.fromJson(json);
 }
-
-/// @nodoc
-class _$RecipeTearOff {
-  const _$RecipeTearOff();
-
-  _Recipe call(
-      {required bool vegetarian,
-      required bool vegan,
-      required bool glutenFree,
-      required bool dairyFree,
-      required bool veryHealthy,
-      required double pricePerServing,
-      required int id,
-      String? title,
-      required int readyInMinutes,
-      required int servings,
-      required String sourceUrl,
-      String? image,
-      required String summary,
-      required List<String> cuisines,
-      required List<String> dishTypes,
-      required List<String> diets,
-      required List<String> occasions,
-      required String instructions,
-      int? cookingMinutes}) {
-    return _Recipe(
-      vegetarian: vegetarian,
-      vegan: vegan,
-      glutenFree: glutenFree,
-      dairyFree: dairyFree,
-      veryHealthy: veryHealthy,
-      pricePerServing: pricePerServing,
-      id: id,
-      title: title,
-      readyInMinutes: readyInMinutes,
-      servings: servings,
-      sourceUrl: sourceUrl,
-      image: image,
-      summary: summary,
-      cuisines: cuisines,
-      dishTypes: dishTypes,
-      diets: diets,
-      occasions: occasions,
-      instructions: instructions,
-      cookingMinutes: cookingMinutes,
-    );
-  }
-
-  Recipe fromJson(Map<String, Object> json) {
-    return Recipe.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Recipe = _$RecipeTearOff();
 
 /// @nodoc
 mixin _$Recipe {
@@ -250,7 +192,8 @@ mixin _$Recipe {
 /// @nodoc
 abstract class $RecipeCopyWith<$Res> {
   factory $RecipeCopyWith(Recipe value, $Res Function(Recipe) then) =
-      _$RecipeCopyWithImpl<$Res>;
+      _$RecipeCopyWithImpl<$Res, Recipe>;
+  @useResult
   $Res call(
       {bool vegetarian,
       bool vegan,
@@ -274,121 +217,126 @@ abstract class $RecipeCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RecipeCopyWithImpl<$Res> implements $RecipeCopyWith<$Res> {
+class _$RecipeCopyWithImpl<$Res, $Val extends Recipe>
+    implements $RecipeCopyWith<$Res> {
   _$RecipeCopyWithImpl(this._value, this._then);
 
-  final Recipe _value;
   // ignore: unused_field
-  final $Res Function(Recipe) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? vegetarian = freezed,
-    Object? vegan = freezed,
-    Object? glutenFree = freezed,
-    Object? dairyFree = freezed,
-    Object? veryHealthy = freezed,
-    Object? pricePerServing = freezed,
-    Object? id = freezed,
+    Object? vegetarian = null,
+    Object? vegan = null,
+    Object? glutenFree = null,
+    Object? dairyFree = null,
+    Object? veryHealthy = null,
+    Object? pricePerServing = null,
+    Object? id = null,
     Object? title = freezed,
-    Object? readyInMinutes = freezed,
-    Object? servings = freezed,
-    Object? sourceUrl = freezed,
+    Object? readyInMinutes = null,
+    Object? servings = null,
+    Object? sourceUrl = null,
     Object? image = freezed,
-    Object? summary = freezed,
-    Object? cuisines = freezed,
-    Object? dishTypes = freezed,
-    Object? diets = freezed,
-    Object? occasions = freezed,
-    Object? instructions = freezed,
+    Object? summary = null,
+    Object? cuisines = null,
+    Object? dishTypes = null,
+    Object? diets = null,
+    Object? occasions = null,
+    Object? instructions = null,
     Object? cookingMinutes = freezed,
   }) {
     return _then(_value.copyWith(
-      vegetarian: vegetarian == freezed
+      vegetarian: null == vegetarian
           ? _value.vegetarian
           : vegetarian // ignore: cast_nullable_to_non_nullable
               as bool,
-      vegan: vegan == freezed
+      vegan: null == vegan
           ? _value.vegan
           : vegan // ignore: cast_nullable_to_non_nullable
               as bool,
-      glutenFree: glutenFree == freezed
+      glutenFree: null == glutenFree
           ? _value.glutenFree
           : glutenFree // ignore: cast_nullable_to_non_nullable
               as bool,
-      dairyFree: dairyFree == freezed
+      dairyFree: null == dairyFree
           ? _value.dairyFree
           : dairyFree // ignore: cast_nullable_to_non_nullable
               as bool,
-      veryHealthy: veryHealthy == freezed
+      veryHealthy: null == veryHealthy
           ? _value.veryHealthy
           : veryHealthy // ignore: cast_nullable_to_non_nullable
               as bool,
-      pricePerServing: pricePerServing == freezed
+      pricePerServing: null == pricePerServing
           ? _value.pricePerServing
           : pricePerServing // ignore: cast_nullable_to_non_nullable
               as double,
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      readyInMinutes: readyInMinutes == freezed
+      readyInMinutes: null == readyInMinutes
           ? _value.readyInMinutes
           : readyInMinutes // ignore: cast_nullable_to_non_nullable
               as int,
-      servings: servings == freezed
+      servings: null == servings
           ? _value.servings
           : servings // ignore: cast_nullable_to_non_nullable
               as int,
-      sourceUrl: sourceUrl == freezed
+      sourceUrl: null == sourceUrl
           ? _value.sourceUrl
           : sourceUrl // ignore: cast_nullable_to_non_nullable
               as String,
-      image: image == freezed
+      image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String?,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as String,
-      cuisines: cuisines == freezed
+      cuisines: null == cuisines
           ? _value.cuisines
           : cuisines // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      dishTypes: dishTypes == freezed
+      dishTypes: null == dishTypes
           ? _value.dishTypes
           : dishTypes // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      diets: diets == freezed
+      diets: null == diets
           ? _value.diets
           : diets // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      occasions: occasions == freezed
+      occasions: null == occasions
           ? _value.occasions
           : occasions // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      instructions: instructions == freezed
+      instructions: null == instructions
           ? _value.instructions
           : instructions // ignore: cast_nullable_to_non_nullable
               as String,
-      cookingMinutes: cookingMinutes == freezed
+      cookingMinutes: freezed == cookingMinutes
           ? _value.cookingMinutes
           : cookingMinutes // ignore: cast_nullable_to_non_nullable
               as int?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$RecipeCopyWith<$Res> implements $RecipeCopyWith<$Res> {
-  factory _$RecipeCopyWith(_Recipe value, $Res Function(_Recipe) then) =
-      __$RecipeCopyWithImpl<$Res>;
+abstract class _$$RecipeImplCopyWith<$Res> implements $RecipeCopyWith<$Res> {
+  factory _$$RecipeImplCopyWith(
+          _$RecipeImpl value, $Res Function(_$RecipeImpl) then) =
+      __$$RecipeImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {bool vegetarian,
       bool vegan,
@@ -412,110 +360,110 @@ abstract class _$RecipeCopyWith<$Res> implements $RecipeCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$RecipeCopyWithImpl<$Res> extends _$RecipeCopyWithImpl<$Res>
-    implements _$RecipeCopyWith<$Res> {
-  __$RecipeCopyWithImpl(_Recipe _value, $Res Function(_Recipe) _then)
-      : super(_value, (v) => _then(v as _Recipe));
+class __$$RecipeImplCopyWithImpl<$Res>
+    extends _$RecipeCopyWithImpl<$Res, _$RecipeImpl>
+    implements _$$RecipeImplCopyWith<$Res> {
+  __$$RecipeImplCopyWithImpl(
+      _$RecipeImpl _value, $Res Function(_$RecipeImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _Recipe get _value => super._value as _Recipe;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? vegetarian = freezed,
-    Object? vegan = freezed,
-    Object? glutenFree = freezed,
-    Object? dairyFree = freezed,
-    Object? veryHealthy = freezed,
-    Object? pricePerServing = freezed,
-    Object? id = freezed,
+    Object? vegetarian = null,
+    Object? vegan = null,
+    Object? glutenFree = null,
+    Object? dairyFree = null,
+    Object? veryHealthy = null,
+    Object? pricePerServing = null,
+    Object? id = null,
     Object? title = freezed,
-    Object? readyInMinutes = freezed,
-    Object? servings = freezed,
-    Object? sourceUrl = freezed,
+    Object? readyInMinutes = null,
+    Object? servings = null,
+    Object? sourceUrl = null,
     Object? image = freezed,
-    Object? summary = freezed,
-    Object? cuisines = freezed,
-    Object? dishTypes = freezed,
-    Object? diets = freezed,
-    Object? occasions = freezed,
-    Object? instructions = freezed,
+    Object? summary = null,
+    Object? cuisines = null,
+    Object? dishTypes = null,
+    Object? diets = null,
+    Object? occasions = null,
+    Object? instructions = null,
     Object? cookingMinutes = freezed,
   }) {
-    return _then(_Recipe(
-      vegetarian: vegetarian == freezed
+    return _then(_$RecipeImpl(
+      vegetarian: null == vegetarian
           ? _value.vegetarian
           : vegetarian // ignore: cast_nullable_to_non_nullable
               as bool,
-      vegan: vegan == freezed
+      vegan: null == vegan
           ? _value.vegan
           : vegan // ignore: cast_nullable_to_non_nullable
               as bool,
-      glutenFree: glutenFree == freezed
+      glutenFree: null == glutenFree
           ? _value.glutenFree
           : glutenFree // ignore: cast_nullable_to_non_nullable
               as bool,
-      dairyFree: dairyFree == freezed
+      dairyFree: null == dairyFree
           ? _value.dairyFree
           : dairyFree // ignore: cast_nullable_to_non_nullable
               as bool,
-      veryHealthy: veryHealthy == freezed
+      veryHealthy: null == veryHealthy
           ? _value.veryHealthy
           : veryHealthy // ignore: cast_nullable_to_non_nullable
               as bool,
-      pricePerServing: pricePerServing == freezed
+      pricePerServing: null == pricePerServing
           ? _value.pricePerServing
           : pricePerServing // ignore: cast_nullable_to_non_nullable
               as double,
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      readyInMinutes: readyInMinutes == freezed
+      readyInMinutes: null == readyInMinutes
           ? _value.readyInMinutes
           : readyInMinutes // ignore: cast_nullable_to_non_nullable
               as int,
-      servings: servings == freezed
+      servings: null == servings
           ? _value.servings
           : servings // ignore: cast_nullable_to_non_nullable
               as int,
-      sourceUrl: sourceUrl == freezed
+      sourceUrl: null == sourceUrl
           ? _value.sourceUrl
           : sourceUrl // ignore: cast_nullable_to_non_nullable
               as String,
-      image: image == freezed
+      image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String?,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as String,
-      cuisines: cuisines == freezed
-          ? _value.cuisines
+      cuisines: null == cuisines
+          ? _value._cuisines
           : cuisines // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      dishTypes: dishTypes == freezed
-          ? _value.dishTypes
+      dishTypes: null == dishTypes
+          ? _value._dishTypes
           : dishTypes // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      diets: diets == freezed
-          ? _value.diets
+      diets: null == diets
+          ? _value._diets
           : diets // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      occasions: occasions == freezed
-          ? _value.occasions
+      occasions: null == occasions
+          ? _value._occasions
           : occasions // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      instructions: instructions == freezed
+      instructions: null == instructions
           ? _value.instructions
           : instructions // ignore: cast_nullable_to_non_nullable
               as String,
-      cookingMinutes: cookingMinutes == freezed
+      cookingMinutes: freezed == cookingMinutes
           ? _value.cookingMinutes
           : cookingMinutes // ignore: cast_nullable_to_non_nullable
               as int?,
@@ -525,8 +473,8 @@ class __$RecipeCopyWithImpl<$Res> extends _$RecipeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Recipe implements _Recipe {
-  const _$_Recipe(
+class _$RecipeImpl implements _Recipe {
+  const _$RecipeImpl(
       {required this.vegetarian,
       required this.vegan,
       required this.glutenFree,
@@ -540,15 +488,19 @@ class _$_Recipe implements _Recipe {
       required this.sourceUrl,
       this.image,
       required this.summary,
-      required this.cuisines,
-      required this.dishTypes,
-      required this.diets,
-      required this.occasions,
+      required final List<String> cuisines,
+      required final List<String> dishTypes,
+      required final List<String> diets,
+      required final List<String> occasions,
       required this.instructions,
-      this.cookingMinutes});
+      this.cookingMinutes})
+      : _cuisines = cuisines,
+        _dishTypes = dishTypes,
+        _diets = diets,
+        _occasions = occasions;
 
-  factory _$_Recipe.fromJson(Map<String, dynamic> json) =>
-      _$$_RecipeFromJson(json);
+  factory _$RecipeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RecipeImplFromJson(json);
 
   @override
   final bool vegetarian;
@@ -576,14 +528,38 @@ class _$_Recipe implements _Recipe {
   final String? image;
   @override
   final String summary;
+  final List<String> _cuisines;
   @override
-  final List<String> cuisines;
+  List<String> get cuisines {
+    if (_cuisines is EqualUnmodifiableListView) return _cuisines;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_cuisines);
+  }
+
+  final List<String> _dishTypes;
   @override
-  final List<String> dishTypes;
+  List<String> get dishTypes {
+    if (_dishTypes is EqualUnmodifiableListView) return _dishTypes;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_dishTypes);
+  }
+
+  final List<String> _diets;
   @override
-  final List<String> diets;
+  List<String> get diets {
+    if (_diets is EqualUnmodifiableListView) return _diets;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_diets);
+  }
+
+  final List<String> _occasions;
   @override
-  final List<String> occasions;
+  List<String> get occasions {
+    if (_occasions is EqualUnmodifiableListView) return _occasions;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_occasions);
+  }
+
   @override
   final String instructions;
   @override
@@ -595,186 +571,153 @@ class _$_Recipe implements _Recipe {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _Recipe &&
+        (other.runtimeType == runtimeType &&
+            other is _$RecipeImpl &&
             (identical(other.vegetarian, vegetarian) ||
-                const DeepCollectionEquality()
-                    .equals(other.vegetarian, vegetarian)) &&
-            (identical(other.vegan, vegan) ||
-                const DeepCollectionEquality().equals(other.vegan, vegan)) &&
+                other.vegetarian == vegetarian) &&
+            (identical(other.vegan, vegan) || other.vegan == vegan) &&
             (identical(other.glutenFree, glutenFree) ||
-                const DeepCollectionEquality()
-                    .equals(other.glutenFree, glutenFree)) &&
+                other.glutenFree == glutenFree) &&
             (identical(other.dairyFree, dairyFree) ||
-                const DeepCollectionEquality()
-                    .equals(other.dairyFree, dairyFree)) &&
+                other.dairyFree == dairyFree) &&
             (identical(other.veryHealthy, veryHealthy) ||
-                const DeepCollectionEquality()
-                    .equals(other.veryHealthy, veryHealthy)) &&
+                other.veryHealthy == veryHealthy) &&
             (identical(other.pricePerServing, pricePerServing) ||
-                const DeepCollectionEquality()
-                    .equals(other.pricePerServing, pricePerServing)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.title, title) ||
-                const DeepCollectionEquality().equals(other.title, title)) &&
+                other.pricePerServing == pricePerServing) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.title, title) || other.title == title) &&
             (identical(other.readyInMinutes, readyInMinutes) ||
-                const DeepCollectionEquality()
-                    .equals(other.readyInMinutes, readyInMinutes)) &&
+                other.readyInMinutes == readyInMinutes) &&
             (identical(other.servings, servings) ||
-                const DeepCollectionEquality()
-                    .equals(other.servings, servings)) &&
+                other.servings == servings) &&
             (identical(other.sourceUrl, sourceUrl) ||
-                const DeepCollectionEquality()
-                    .equals(other.sourceUrl, sourceUrl)) &&
-            (identical(other.image, image) ||
-                const DeepCollectionEquality().equals(other.image, image)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.cuisines, cuisines) ||
-                const DeepCollectionEquality()
-                    .equals(other.cuisines, cuisines)) &&
-            (identical(other.dishTypes, dishTypes) ||
-                const DeepCollectionEquality()
-                    .equals(other.dishTypes, dishTypes)) &&
-            (identical(other.diets, diets) ||
-                const DeepCollectionEquality().equals(other.diets, diets)) &&
-            (identical(other.occasions, occasions) ||
-                const DeepCollectionEquality()
-                    .equals(other.occasions, occasions)) &&
+                other.sourceUrl == sourceUrl) &&
+            (identical(other.image, image) || other.image == image) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            const DeepCollectionEquality().equals(other._cuisines, _cuisines) &&
+            const DeepCollectionEquality()
+                .equals(other._dishTypes, _dishTypes) &&
+            const DeepCollectionEquality().equals(other._diets, _diets) &&
+            const DeepCollectionEquality()
+                .equals(other._occasions, _occasions) &&
             (identical(other.instructions, instructions) ||
-                const DeepCollectionEquality()
-                    .equals(other.instructions, instructions)) &&
+                other.instructions == instructions) &&
             (identical(other.cookingMinutes, cookingMinutes) ||
-                const DeepCollectionEquality()
-                    .equals(other.cookingMinutes, cookingMinutes)));
+                other.cookingMinutes == cookingMinutes));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(vegetarian) ^
-      const DeepCollectionEquality().hash(vegan) ^
-      const DeepCollectionEquality().hash(glutenFree) ^
-      const DeepCollectionEquality().hash(dairyFree) ^
-      const DeepCollectionEquality().hash(veryHealthy) ^
-      const DeepCollectionEquality().hash(pricePerServing) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(title) ^
-      const DeepCollectionEquality().hash(readyInMinutes) ^
-      const DeepCollectionEquality().hash(servings) ^
-      const DeepCollectionEquality().hash(sourceUrl) ^
-      const DeepCollectionEquality().hash(image) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(cuisines) ^
-      const DeepCollectionEquality().hash(dishTypes) ^
-      const DeepCollectionEquality().hash(diets) ^
-      const DeepCollectionEquality().hash(occasions) ^
-      const DeepCollectionEquality().hash(instructions) ^
-      const DeepCollectionEquality().hash(cookingMinutes);
 
   @JsonKey(ignore: true)
   @override
-  _$RecipeCopyWith<_Recipe> get copyWith =>
-      __$RecipeCopyWithImpl<_Recipe>(this, _$identity);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        vegetarian,
+        vegan,
+        glutenFree,
+        dairyFree,
+        veryHealthy,
+        pricePerServing,
+        id,
+        title,
+        readyInMinutes,
+        servings,
+        sourceUrl,
+        image,
+        summary,
+        const DeepCollectionEquality().hash(_cuisines),
+        const DeepCollectionEquality().hash(_dishTypes),
+        const DeepCollectionEquality().hash(_diets),
+        const DeepCollectionEquality().hash(_occasions),
+        instructions,
+        cookingMinutes
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$RecipeImplCopyWith<_$RecipeImpl> get copyWith =>
+      __$$RecipeImplCopyWithImpl<_$RecipeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RecipeToJson(this);
+    return _$$RecipeImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Recipe implements Recipe {
   const factory _Recipe(
-      {required bool vegetarian,
-      required bool vegan,
-      required bool glutenFree,
-      required bool dairyFree,
-      required bool veryHealthy,
-      required double pricePerServing,
-      required int id,
-      String? title,
-      required int readyInMinutes,
-      required int servings,
-      required String sourceUrl,
-      String? image,
-      required String summary,
-      required List<String> cuisines,
-      required List<String> dishTypes,
-      required List<String> diets,
-      required List<String> occasions,
-      required String instructions,
-      int? cookingMinutes}) = _$_Recipe;
+      {required final bool vegetarian,
+      required final bool vegan,
+      required final bool glutenFree,
+      required final bool dairyFree,
+      required final bool veryHealthy,
+      required final double pricePerServing,
+      required final int id,
+      final String? title,
+      required final int readyInMinutes,
+      required final int servings,
+      required final String sourceUrl,
+      final String? image,
+      required final String summary,
+      required final List<String> cuisines,
+      required final List<String> dishTypes,
+      required final List<String> diets,
+      required final List<String> occasions,
+      required final String instructions,
+      final int? cookingMinutes}) = _$RecipeImpl;
 
-  factory _Recipe.fromJson(Map<String, dynamic> json) = _$_Recipe.fromJson;
+  factory _Recipe.fromJson(Map<String, dynamic> json) = _$RecipeImpl.fromJson;
 
   @override
-  bool get vegetarian => throw _privateConstructorUsedError;
+  bool get vegetarian;
   @override
-  bool get vegan => throw _privateConstructorUsedError;
+  bool get vegan;
   @override
-  bool get glutenFree => throw _privateConstructorUsedError;
+  bool get glutenFree;
   @override
-  bool get dairyFree => throw _privateConstructorUsedError;
+  bool get dairyFree;
   @override
-  bool get veryHealthy => throw _privateConstructorUsedError;
+  bool get veryHealthy;
   @override
-  double get pricePerServing => throw _privateConstructorUsedError;
+  double get pricePerServing;
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  String? get title => throw _privateConstructorUsedError;
+  String? get title;
   @override
-  int get readyInMinutes => throw _privateConstructorUsedError;
+  int get readyInMinutes;
   @override
-  int get servings => throw _privateConstructorUsedError;
+  int get servings;
   @override
-  String get sourceUrl => throw _privateConstructorUsedError;
+  String get sourceUrl;
   @override
-  String? get image => throw _privateConstructorUsedError;
+  String? get image;
   @override
-  String get summary => throw _privateConstructorUsedError;
+  String get summary;
   @override
-  List<String> get cuisines => throw _privateConstructorUsedError;
+  List<String> get cuisines;
   @override
-  List<String> get dishTypes => throw _privateConstructorUsedError;
+  List<String> get dishTypes;
   @override
-  List<String> get diets => throw _privateConstructorUsedError;
+  List<String> get diets;
   @override
-  List<String> get occasions => throw _privateConstructorUsedError;
+  List<String> get occasions;
   @override
-  String get instructions => throw _privateConstructorUsedError;
+  String get instructions;
   @override
-  int? get cookingMinutes => throw _privateConstructorUsedError;
+  int? get cookingMinutes;
   @override
   @JsonKey(ignore: true)
-  _$RecipeCopyWith<_Recipe> get copyWith => throw _privateConstructorUsedError;
+  _$$RecipeImplCopyWith<_$RecipeImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Measures _$MeasuresFromJson(Map<String, dynamic> json) {
   return _Measures.fromJson(json);
 }
-
-/// @nodoc
-class _$MeasuresTearOff {
-  const _$MeasuresTearOff();
-
-  _Measures call({required Metric us, required Metric metric}) {
-    return _Measures(
-      us: us,
-      metric: metric,
-    );
-  }
-
-  Measures fromJson(Map<String, Object> json) {
-    return Measures.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Measures = _$MeasuresTearOff();
 
 /// @nodoc
 mixin _$Measures {
@@ -790,7 +733,8 @@ mixin _$Measures {
 /// @nodoc
 abstract class $MeasuresCopyWith<$Res> {
   factory $MeasuresCopyWith(Measures value, $Res Function(Measures) then) =
-      _$MeasuresCopyWithImpl<$Res>;
+      _$MeasuresCopyWithImpl<$Res, Measures>;
+  @useResult
   $Res call({Metric us, Metric metric});
 
   $MetricCopyWith<$Res> get us;
@@ -798,50 +742,58 @@ abstract class $MeasuresCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MeasuresCopyWithImpl<$Res> implements $MeasuresCopyWith<$Res> {
+class _$MeasuresCopyWithImpl<$Res, $Val extends Measures>
+    implements $MeasuresCopyWith<$Res> {
   _$MeasuresCopyWithImpl(this._value, this._then);
 
-  final Measures _value;
   // ignore: unused_field
-  final $Res Function(Measures) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? us = freezed,
-    Object? metric = freezed,
+    Object? us = null,
+    Object? metric = null,
   }) {
     return _then(_value.copyWith(
-      us: us == freezed
+      us: null == us
           ? _value.us
           : us // ignore: cast_nullable_to_non_nullable
               as Metric,
-      metric: metric == freezed
+      metric: null == metric
           ? _value.metric
           : metric // ignore: cast_nullable_to_non_nullable
               as Metric,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetricCopyWith<$Res> get us {
     return $MetricCopyWith<$Res>(_value.us, (value) {
-      return _then(_value.copyWith(us: value));
+      return _then(_value.copyWith(us: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetricCopyWith<$Res> get metric {
     return $MetricCopyWith<$Res>(_value.metric, (value) {
-      return _then(_value.copyWith(metric: value));
+      return _then(_value.copyWith(metric: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$MeasuresCopyWith<$Res> implements $MeasuresCopyWith<$Res> {
-  factory _$MeasuresCopyWith(_Measures value, $Res Function(_Measures) then) =
-      __$MeasuresCopyWithImpl<$Res>;
+abstract class _$$MeasuresImplCopyWith<$Res>
+    implements $MeasuresCopyWith<$Res> {
+  factory _$$MeasuresImplCopyWith(
+          _$MeasuresImpl value, $Res Function(_$MeasuresImpl) then) =
+      __$$MeasuresImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({Metric us, Metric metric});
 
   @override
@@ -851,25 +803,25 @@ abstract class _$MeasuresCopyWith<$Res> implements $MeasuresCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$MeasuresCopyWithImpl<$Res> extends _$MeasuresCopyWithImpl<$Res>
-    implements _$MeasuresCopyWith<$Res> {
-  __$MeasuresCopyWithImpl(_Measures _value, $Res Function(_Measures) _then)
-      : super(_value, (v) => _then(v as _Measures));
+class __$$MeasuresImplCopyWithImpl<$Res>
+    extends _$MeasuresCopyWithImpl<$Res, _$MeasuresImpl>
+    implements _$$MeasuresImplCopyWith<$Res> {
+  __$$MeasuresImplCopyWithImpl(
+      _$MeasuresImpl _value, $Res Function(_$MeasuresImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _Measures get _value => super._value as _Measures;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? us = freezed,
-    Object? metric = freezed,
+    Object? us = null,
+    Object? metric = null,
   }) {
-    return _then(_Measures(
-      us: us == freezed
+    return _then(_$MeasuresImpl(
+      us: null == us
           ? _value.us
           : us // ignore: cast_nullable_to_non_nullable
               as Metric,
-      metric: metric == freezed
+      metric: null == metric
           ? _value.metric
           : metric // ignore: cast_nullable_to_non_nullable
               as Metric,
@@ -879,11 +831,11 @@ class __$MeasuresCopyWithImpl<$Res> extends _$MeasuresCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Measures implements _Measures {
-  const _$_Measures({required this.us, required this.metric});
+class _$MeasuresImpl implements _Measures {
+  const _$MeasuresImpl({required this.us, required this.metric});
 
-  factory _$_Measures.fromJson(Map<String, dynamic> json) =>
-      _$$_MeasuresFromJson(json);
+  factory _$MeasuresImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MeasuresImplFromJson(json);
 
   @override
   final Metric us;
@@ -896,74 +848,53 @@ class _$_Measures implements _Measures {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _Measures &&
-            (identical(other.us, us) ||
-                const DeepCollectionEquality().equals(other.us, us)) &&
-            (identical(other.metric, metric) ||
-                const DeepCollectionEquality().equals(other.metric, metric)));
+        (other.runtimeType == runtimeType &&
+            other is _$MeasuresImpl &&
+            (identical(other.us, us) || other.us == us) &&
+            (identical(other.metric, metric) || other.metric == metric));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(us) ^
-      const DeepCollectionEquality().hash(metric);
 
   @JsonKey(ignore: true)
   @override
-  _$MeasuresCopyWith<_Measures> get copyWith =>
-      __$MeasuresCopyWithImpl<_Measures>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, us, metric);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MeasuresImplCopyWith<_$MeasuresImpl> get copyWith =>
+      __$$MeasuresImplCopyWithImpl<_$MeasuresImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MeasuresToJson(this);
+    return _$$MeasuresImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Measures implements Measures {
-  const factory _Measures({required Metric us, required Metric metric}) =
-      _$_Measures;
+  const factory _Measures(
+      {required final Metric us,
+      required final Metric metric}) = _$MeasuresImpl;
 
-  factory _Measures.fromJson(Map<String, dynamic> json) = _$_Measures.fromJson;
+  factory _Measures.fromJson(Map<String, dynamic> json) =
+      _$MeasuresImpl.fromJson;
 
   @override
-  Metric get us => throw _privateConstructorUsedError;
+  Metric get us;
   @override
-  Metric get metric => throw _privateConstructorUsedError;
+  Metric get metric;
   @override
   @JsonKey(ignore: true)
-  _$MeasuresCopyWith<_Measures> get copyWith =>
+  _$$MeasuresImplCopyWith<_$MeasuresImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 Metric _$MetricFromJson(Map<String, dynamic> json) {
   return _Metric.fromJson(json);
 }
-
-/// @nodoc
-class _$MetricTearOff {
-  const _$MetricTearOff();
-
-  _Metric call(
-      {required double amount,
-      required String unitShort,
-      required String unitLong}) {
-    return _Metric(
-      amount: amount,
-      unitShort: unitShort,
-      unitLong: unitLong,
-    );
-  }
-
-  Metric fromJson(Map<String, Object> json) {
-    return Metric.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Metric = _$MetricTearOff();
 
 /// @nodoc
 mixin _$Metric {
@@ -979,74 +910,80 @@ mixin _$Metric {
 /// @nodoc
 abstract class $MetricCopyWith<$Res> {
   factory $MetricCopyWith(Metric value, $Res Function(Metric) then) =
-      _$MetricCopyWithImpl<$Res>;
+      _$MetricCopyWithImpl<$Res, Metric>;
+  @useResult
   $Res call({double amount, String unitShort, String unitLong});
 }
 
 /// @nodoc
-class _$MetricCopyWithImpl<$Res> implements $MetricCopyWith<$Res> {
+class _$MetricCopyWithImpl<$Res, $Val extends Metric>
+    implements $MetricCopyWith<$Res> {
   _$MetricCopyWithImpl(this._value, this._then);
 
-  final Metric _value;
   // ignore: unused_field
-  final $Res Function(Metric) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? amount = freezed,
-    Object? unitShort = freezed,
-    Object? unitLong = freezed,
+    Object? amount = null,
+    Object? unitShort = null,
+    Object? unitLong = null,
   }) {
     return _then(_value.copyWith(
-      amount: amount == freezed
+      amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as double,
-      unitShort: unitShort == freezed
+      unitShort: null == unitShort
           ? _value.unitShort
           : unitShort // ignore: cast_nullable_to_non_nullable
               as String,
-      unitLong: unitLong == freezed
+      unitLong: null == unitLong
           ? _value.unitLong
           : unitLong // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$MetricCopyWith<$Res> implements $MetricCopyWith<$Res> {
-  factory _$MetricCopyWith(_Metric value, $Res Function(_Metric) then) =
-      __$MetricCopyWithImpl<$Res>;
+abstract class _$$MetricImplCopyWith<$Res> implements $MetricCopyWith<$Res> {
+  factory _$$MetricImplCopyWith(
+          _$MetricImpl value, $Res Function(_$MetricImpl) then) =
+      __$$MetricImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({double amount, String unitShort, String unitLong});
 }
 
 /// @nodoc
-class __$MetricCopyWithImpl<$Res> extends _$MetricCopyWithImpl<$Res>
-    implements _$MetricCopyWith<$Res> {
-  __$MetricCopyWithImpl(_Metric _value, $Res Function(_Metric) _then)
-      : super(_value, (v) => _then(v as _Metric));
+class __$$MetricImplCopyWithImpl<$Res>
+    extends _$MetricCopyWithImpl<$Res, _$MetricImpl>
+    implements _$$MetricImplCopyWith<$Res> {
+  __$$MetricImplCopyWithImpl(
+      _$MetricImpl _value, $Res Function(_$MetricImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _Metric get _value => super._value as _Metric;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? amount = freezed,
-    Object? unitShort = freezed,
-    Object? unitLong = freezed,
+    Object? amount = null,
+    Object? unitShort = null,
+    Object? unitLong = null,
   }) {
-    return _then(_Metric(
-      amount: amount == freezed
+    return _then(_$MetricImpl(
+      amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as double,
-      unitShort: unitShort == freezed
+      unitShort: null == unitShort
           ? _value.unitShort
           : unitShort // ignore: cast_nullable_to_non_nullable
               as String,
-      unitLong: unitLong == freezed
+      unitLong: null == unitLong
           ? _value.unitLong
           : unitLong // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1056,12 +993,12 @@ class __$MetricCopyWithImpl<$Res> extends _$MetricCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Metric implements _Metric {
-  const _$_Metric(
+class _$MetricImpl implements _Metric {
+  const _$MetricImpl(
       {required this.amount, required this.unitShort, required this.unitLong});
 
-  factory _$_Metric.fromJson(Map<String, dynamic> json) =>
-      _$$_MetricFromJson(json);
+  factory _$MetricImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MetricImplFromJson(json);
 
   @override
   final double amount;
@@ -1076,52 +1013,51 @@ class _$_Metric implements _Metric {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _Metric &&
-            (identical(other.amount, amount) ||
-                const DeepCollectionEquality().equals(other.amount, amount)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$MetricImpl &&
+            (identical(other.amount, amount) || other.amount == amount) &&
             (identical(other.unitShort, unitShort) ||
-                const DeepCollectionEquality()
-                    .equals(other.unitShort, unitShort)) &&
+                other.unitShort == unitShort) &&
             (identical(other.unitLong, unitLong) ||
-                const DeepCollectionEquality()
-                    .equals(other.unitLong, unitLong)));
+                other.unitLong == unitLong));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(amount) ^
-      const DeepCollectionEquality().hash(unitShort) ^
-      const DeepCollectionEquality().hash(unitLong);
 
   @JsonKey(ignore: true)
   @override
-  _$MetricCopyWith<_Metric> get copyWith =>
-      __$MetricCopyWithImpl<_Metric>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, amount, unitShort, unitLong);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MetricImplCopyWith<_$MetricImpl> get copyWith =>
+      __$$MetricImplCopyWithImpl<_$MetricImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MetricToJson(this);
+    return _$$MetricImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Metric implements Metric {
   const factory _Metric(
-      {required double amount,
-      required String unitShort,
-      required String unitLong}) = _$_Metric;
+      {required final double amount,
+      required final String unitShort,
+      required final String unitLong}) = _$MetricImpl;
 
-  factory _Metric.fromJson(Map<String, dynamic> json) = _$_Metric.fromJson;
+  factory _Metric.fromJson(Map<String, dynamic> json) = _$MetricImpl.fromJson;
 
   @override
-  double get amount => throw _privateConstructorUsedError;
+  double get amount;
   @override
-  String get unitShort => throw _privateConstructorUsedError;
+  String get unitShort;
   @override
-  String get unitLong => throw _privateConstructorUsedError;
+  String get unitLong;
   @override
   @JsonKey(ignore: true)
-  _$MetricCopyWith<_Metric> get copyWith => throw _privateConstructorUsedError;
+  _$$MetricImplCopyWith<_$MetricImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -14,8 +14,7 @@ class FoodIntro extends StatelessWidget {
       required this.heading,
       required this.imageUrl,
       required this.foodInfo,
-      Key? key})
-      : super(key: key);
+      super.key});
 
   final String servingsTitle;
   final String healthScoreTitle;
@@ -34,6 +33,7 @@ class FoodIntro extends StatelessWidget {
           const SizedBox(height: 16),
           Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
             Expanded(child: _foodImage(imageUrl)),
+            const SizedBox(width: 4),
             Flexible(
               child: _foodColumn(
                   servingsTitle: servingsTitle,
@@ -109,7 +109,7 @@ Widget _foodColumn({
         child: Row(children: [
           const Icon(Icons.fastfood),
           const SizedBox(width: 8),
-          Text('$servings $servingsTitle'),
+          Flexible(child: Text('$servings $servingsTitle')),
         ]),
       ),
       Padding(
@@ -117,7 +117,7 @@ Widget _foodColumn({
         child: Row(children: [
           const Icon(Icons.health_and_safety),
           const SizedBox(width: 8),
-          Text('$healthScore $healthScoreTitle'),
+          Flexible(child: Text('$healthScore $healthScoreTitle')),
         ]),
       ),
       Padding(
@@ -125,7 +125,7 @@ Widget _foodColumn({
         child: Row(children: [
           const Icon(Icons.score),
           const SizedBox(width: 8),
-          Text('$timeForCooking $cookingTime min'),
+          Flexible(child: Text('$timeForCooking $cookingTime min')),
         ]),
       ),
     ]),

@@ -7,8 +7,7 @@ import 'package:food_stuff/src/ui/widgets/responsive.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class SearchResultPage extends HookConsumerWidget {
-  const SearchResultPage({required this.userSearch, Key? key})
-      : super(key: key);
+  const SearchResultPage({required this.userSearch, super.key});
 
   final String userSearch;
 
@@ -27,7 +26,7 @@ class SearchResultPage extends HookConsumerWidget {
                   onPressed: () => Navigator.pop(context),
                 ),
                 Expanded(
-                    child: SearchBar(
+                    child: CustomSearchBar(
                         readOnly: false,
                         autofocus: false,
                         onClick: () {

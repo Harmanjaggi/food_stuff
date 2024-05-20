@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'res_similar_recipes.dart';
 
@@ -11,38 +12,11 @@ part of 'res_similar_recipes.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ResSimilarRecipes _$ResSimilarRecipesFromJson(Map<String, dynamic> json) {
   return _ResSimilarRecipes.fromJson(json);
 }
-
-/// @nodoc
-class _$ResSimilarRecipesTearOff {
-  const _$ResSimilarRecipesTearOff();
-
-  _ResSimilarRecipes call(
-      {int? id,
-      String? title,
-      int? readyInMinutes,
-      int? servings,
-      String? sourceUrl}) {
-    return _ResSimilarRecipes(
-      id: id,
-      title: title,
-      readyInMinutes: readyInMinutes,
-      servings: servings,
-      sourceUrl: sourceUrl,
-    );
-  }
-
-  ResSimilarRecipes fromJson(Map<String, Object> json) {
-    return ResSimilarRecipes.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ResSimilarRecipes = _$ResSimilarRecipesTearOff();
 
 /// @nodoc
 mixin _$ResSimilarRecipes {
@@ -62,7 +36,8 @@ mixin _$ResSimilarRecipes {
 abstract class $ResSimilarRecipesCopyWith<$Res> {
   factory $ResSimilarRecipesCopyWith(
           ResSimilarRecipes value, $Res Function(ResSimilarRecipes) then) =
-      _$ResSimilarRecipesCopyWithImpl<$Res>;
+      _$ResSimilarRecipesCopyWithImpl<$Res, ResSimilarRecipes>;
+  @useResult
   $Res call(
       {int? id,
       String? title,
@@ -72,14 +47,16 @@ abstract class $ResSimilarRecipesCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ResSimilarRecipesCopyWithImpl<$Res>
+class _$ResSimilarRecipesCopyWithImpl<$Res, $Val extends ResSimilarRecipes>
     implements $ResSimilarRecipesCopyWith<$Res> {
   _$ResSimilarRecipesCopyWithImpl(this._value, this._then);
 
-  final ResSimilarRecipes _value;
   // ignore: unused_field
-  final $Res Function(ResSimilarRecipes) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -89,37 +66,38 @@ class _$ResSimilarRecipesCopyWithImpl<$Res>
     Object? sourceUrl = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      readyInMinutes: readyInMinutes == freezed
+      readyInMinutes: freezed == readyInMinutes
           ? _value.readyInMinutes
           : readyInMinutes // ignore: cast_nullable_to_non_nullable
               as int?,
-      servings: servings == freezed
+      servings: freezed == servings
           ? _value.servings
           : servings // ignore: cast_nullable_to_non_nullable
               as int?,
-      sourceUrl: sourceUrl == freezed
+      sourceUrl: freezed == sourceUrl
           ? _value.sourceUrl
           : sourceUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ResSimilarRecipesCopyWith<$Res>
+abstract class _$$ResSimilarRecipesImplCopyWith<$Res>
     implements $ResSimilarRecipesCopyWith<$Res> {
-  factory _$ResSimilarRecipesCopyWith(
-          _ResSimilarRecipes value, $Res Function(_ResSimilarRecipes) then) =
-      __$ResSimilarRecipesCopyWithImpl<$Res>;
+  factory _$$ResSimilarRecipesImplCopyWith(_$ResSimilarRecipesImpl value,
+          $Res Function(_$ResSimilarRecipesImpl) then) =
+      __$$ResSimilarRecipesImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int? id,
       String? title,
@@ -129,16 +107,14 @@ abstract class _$ResSimilarRecipesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ResSimilarRecipesCopyWithImpl<$Res>
-    extends _$ResSimilarRecipesCopyWithImpl<$Res>
-    implements _$ResSimilarRecipesCopyWith<$Res> {
-  __$ResSimilarRecipesCopyWithImpl(
-      _ResSimilarRecipes _value, $Res Function(_ResSimilarRecipes) _then)
-      : super(_value, (v) => _then(v as _ResSimilarRecipes));
+class __$$ResSimilarRecipesImplCopyWithImpl<$Res>
+    extends _$ResSimilarRecipesCopyWithImpl<$Res, _$ResSimilarRecipesImpl>
+    implements _$$ResSimilarRecipesImplCopyWith<$Res> {
+  __$$ResSimilarRecipesImplCopyWithImpl(_$ResSimilarRecipesImpl _value,
+      $Res Function(_$ResSimilarRecipesImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _ResSimilarRecipes get _value => super._value as _ResSimilarRecipes;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -147,24 +123,24 @@ class __$ResSimilarRecipesCopyWithImpl<$Res>
     Object? servings = freezed,
     Object? sourceUrl = freezed,
   }) {
-    return _then(_ResSimilarRecipes(
-      id: id == freezed
+    return _then(_$ResSimilarRecipesImpl(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      readyInMinutes: readyInMinutes == freezed
+      readyInMinutes: freezed == readyInMinutes
           ? _value.readyInMinutes
           : readyInMinutes // ignore: cast_nullable_to_non_nullable
               as int?,
-      servings: servings == freezed
+      servings: freezed == servings
           ? _value.servings
           : servings // ignore: cast_nullable_to_non_nullable
               as int?,
-      sourceUrl: sourceUrl == freezed
+      sourceUrl: freezed == sourceUrl
           ? _value.sourceUrl
           : sourceUrl // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -174,20 +150,21 @@ class __$ResSimilarRecipesCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResSimilarRecipes implements _ResSimilarRecipes {
-  const _$_ResSimilarRecipes(
+class _$ResSimilarRecipesImpl implements _ResSimilarRecipes {
+  const _$ResSimilarRecipesImpl(
       {this.id,
       this.title,
       this.readyInMinutes,
       this.servings,
       this.sourceUrl});
 
-  factory _$_ResSimilarRecipes.fromJson(Map<String, dynamic> json) =>
-      _$$_ResSimilarRecipesFromJson(json);
+  factory _$ResSimilarRecipesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResSimilarRecipesImplFromJson(json);
 
   @override
   final int? id;
-  @override // ImageType imageType,
+// ImageType imageType,
+  @override
   final String? title;
   @override
   final int? readyInMinutes;
@@ -202,67 +179,63 @@ class _$_ResSimilarRecipes implements _ResSimilarRecipes {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _ResSimilarRecipes &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.title, title) ||
-                const DeepCollectionEquality().equals(other.title, title)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$ResSimilarRecipesImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.title, title) || other.title == title) &&
             (identical(other.readyInMinutes, readyInMinutes) ||
-                const DeepCollectionEquality()
-                    .equals(other.readyInMinutes, readyInMinutes)) &&
+                other.readyInMinutes == readyInMinutes) &&
             (identical(other.servings, servings) ||
-                const DeepCollectionEquality()
-                    .equals(other.servings, servings)) &&
+                other.servings == servings) &&
             (identical(other.sourceUrl, sourceUrl) ||
-                const DeepCollectionEquality()
-                    .equals(other.sourceUrl, sourceUrl)));
+                other.sourceUrl == sourceUrl));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(title) ^
-      const DeepCollectionEquality().hash(readyInMinutes) ^
-      const DeepCollectionEquality().hash(servings) ^
-      const DeepCollectionEquality().hash(sourceUrl);
 
   @JsonKey(ignore: true)
   @override
-  _$ResSimilarRecipesCopyWith<_ResSimilarRecipes> get copyWith =>
-      __$ResSimilarRecipesCopyWithImpl<_ResSimilarRecipes>(this, _$identity);
+  int get hashCode =>
+      Object.hash(runtimeType, id, title, readyInMinutes, servings, sourceUrl);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ResSimilarRecipesImplCopyWith<_$ResSimilarRecipesImpl> get copyWith =>
+      __$$ResSimilarRecipesImplCopyWithImpl<_$ResSimilarRecipesImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResSimilarRecipesToJson(this);
+    return _$$ResSimilarRecipesImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _ResSimilarRecipes implements ResSimilarRecipes {
   const factory _ResSimilarRecipes(
-      {int? id,
-      String? title,
-      int? readyInMinutes,
-      int? servings,
-      String? sourceUrl}) = _$_ResSimilarRecipes;
+      {final int? id,
+      final String? title,
+      final int? readyInMinutes,
+      final int? servings,
+      final String? sourceUrl}) = _$ResSimilarRecipesImpl;
 
   factory _ResSimilarRecipes.fromJson(Map<String, dynamic> json) =
-      _$_ResSimilarRecipes.fromJson;
+      _$ResSimilarRecipesImpl.fromJson;
 
   @override
-  int? get id => throw _privateConstructorUsedError;
+  int? get id;
   @override // ImageType imageType,
-  String? get title => throw _privateConstructorUsedError;
+  String? get title;
   @override
-  int? get readyInMinutes => throw _privateConstructorUsedError;
+  int? get readyInMinutes;
   @override
-  int? get servings => throw _privateConstructorUsedError;
+  int? get servings;
   @override
-  String? get sourceUrl => throw _privateConstructorUsedError;
+  String? get sourceUrl;
   @override
   @JsonKey(ignore: true)
-  _$ResSimilarRecipesCopyWith<_ResSimilarRecipes> get copyWith =>
+  _$$ResSimilarRecipesImplCopyWith<_$ResSimilarRecipesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'res_search.dart';
 
@@ -11,36 +12,11 @@ part of 'res_search.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ResSearch _$ResSearchFromJson(Map<String, dynamic> json) {
   return _ResSearch.fromJson(json);
 }
-
-/// @nodoc
-class _$ResSearchTearOff {
-  const _$ResSearchTearOff();
-
-  _ResSearch call(
-      {required List<Result> results,
-      required int offset,
-      required int number,
-      required int totalResults}) {
-    return _ResSearch(
-      results: results,
-      offset: offset,
-      number: number,
-      totalResults: totalResults,
-    );
-  }
-
-  ResSearch fromJson(Map<String, Object> json) {
-    return ResSearch.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ResSearch = _$ResSearchTearOff();
 
 /// @nodoc
 mixin _$ResSearch {
@@ -58,85 +34,91 @@ mixin _$ResSearch {
 /// @nodoc
 abstract class $ResSearchCopyWith<$Res> {
   factory $ResSearchCopyWith(ResSearch value, $Res Function(ResSearch) then) =
-      _$ResSearchCopyWithImpl<$Res>;
+      _$ResSearchCopyWithImpl<$Res, ResSearch>;
+  @useResult
   $Res call({List<Result> results, int offset, int number, int totalResults});
 }
 
 /// @nodoc
-class _$ResSearchCopyWithImpl<$Res> implements $ResSearchCopyWith<$Res> {
+class _$ResSearchCopyWithImpl<$Res, $Val extends ResSearch>
+    implements $ResSearchCopyWith<$Res> {
   _$ResSearchCopyWithImpl(this._value, this._then);
 
-  final ResSearch _value;
   // ignore: unused_field
-  final $Res Function(ResSearch) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? results = freezed,
-    Object? offset = freezed,
-    Object? number = freezed,
-    Object? totalResults = freezed,
+    Object? results = null,
+    Object? offset = null,
+    Object? number = null,
+    Object? totalResults = null,
   }) {
     return _then(_value.copyWith(
-      results: results == freezed
+      results: null == results
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
               as List<Result>,
-      offset: offset == freezed
+      offset: null == offset
           ? _value.offset
           : offset // ignore: cast_nullable_to_non_nullable
               as int,
-      number: number == freezed
+      number: null == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
               as int,
-      totalResults: totalResults == freezed
+      totalResults: null == totalResults
           ? _value.totalResults
           : totalResults // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ResSearchCopyWith<$Res> implements $ResSearchCopyWith<$Res> {
-  factory _$ResSearchCopyWith(
-          _ResSearch value, $Res Function(_ResSearch) then) =
-      __$ResSearchCopyWithImpl<$Res>;
+abstract class _$$ResSearchImplCopyWith<$Res>
+    implements $ResSearchCopyWith<$Res> {
+  factory _$$ResSearchImplCopyWith(
+          _$ResSearchImpl value, $Res Function(_$ResSearchImpl) then) =
+      __$$ResSearchImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({List<Result> results, int offset, int number, int totalResults});
 }
 
 /// @nodoc
-class __$ResSearchCopyWithImpl<$Res> extends _$ResSearchCopyWithImpl<$Res>
-    implements _$ResSearchCopyWith<$Res> {
-  __$ResSearchCopyWithImpl(_ResSearch _value, $Res Function(_ResSearch) _then)
-      : super(_value, (v) => _then(v as _ResSearch));
+class __$$ResSearchImplCopyWithImpl<$Res>
+    extends _$ResSearchCopyWithImpl<$Res, _$ResSearchImpl>
+    implements _$$ResSearchImplCopyWith<$Res> {
+  __$$ResSearchImplCopyWithImpl(
+      _$ResSearchImpl _value, $Res Function(_$ResSearchImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _ResSearch get _value => super._value as _ResSearch;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? results = freezed,
-    Object? offset = freezed,
-    Object? number = freezed,
-    Object? totalResults = freezed,
+    Object? results = null,
+    Object? offset = null,
+    Object? number = null,
+    Object? totalResults = null,
   }) {
-    return _then(_ResSearch(
-      results: results == freezed
-          ? _value.results
+    return _then(_$ResSearchImpl(
+      results: null == results
+          ? _value._results
           : results // ignore: cast_nullable_to_non_nullable
               as List<Result>,
-      offset: offset == freezed
+      offset: null == offset
           ? _value.offset
           : offset // ignore: cast_nullable_to_non_nullable
               as int,
-      number: number == freezed
+      number: null == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
               as int,
-      totalResults: totalResults == freezed
+      totalResults: null == totalResults
           ? _value.totalResults
           : totalResults // ignore: cast_nullable_to_non_nullable
               as int,
@@ -146,18 +128,25 @@ class __$ResSearchCopyWithImpl<$Res> extends _$ResSearchCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResSearch implements _ResSearch {
-  const _$_ResSearch(
-      {required this.results,
+class _$ResSearchImpl implements _ResSearch {
+  const _$ResSearchImpl(
+      {required final List<Result> results,
       required this.offset,
       required this.number,
-      required this.totalResults});
+      required this.totalResults})
+      : _results = results;
 
-  factory _$_ResSearch.fromJson(Map<String, dynamic> json) =>
-      _$$_ResSearchFromJson(json);
+  factory _$ResSearchImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResSearchImplFromJson(json);
 
+  final List<Result> _results;
   @override
-  final List<Result> results;
+  List<Result> get results {
+    if (_results is EqualUnmodifiableListView) return _results;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_results);
+  }
+
   @override
   final int offset;
   @override
@@ -171,92 +160,67 @@ class _$_ResSearch implements _ResSearch {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _ResSearch &&
-            (identical(other.results, results) ||
-                const DeepCollectionEquality()
-                    .equals(other.results, results)) &&
-            (identical(other.offset, offset) ||
-                const DeepCollectionEquality().equals(other.offset, offset)) &&
-            (identical(other.number, number) ||
-                const DeepCollectionEquality().equals(other.number, number)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$ResSearchImpl &&
+            const DeepCollectionEquality().equals(other._results, _results) &&
+            (identical(other.offset, offset) || other.offset == offset) &&
+            (identical(other.number, number) || other.number == number) &&
             (identical(other.totalResults, totalResults) ||
-                const DeepCollectionEquality()
-                    .equals(other.totalResults, totalResults)));
+                other.totalResults == totalResults));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(results) ^
-      const DeepCollectionEquality().hash(offset) ^
-      const DeepCollectionEquality().hash(number) ^
-      const DeepCollectionEquality().hash(totalResults);
 
   @JsonKey(ignore: true)
   @override
-  _$ResSearchCopyWith<_ResSearch> get copyWith =>
-      __$ResSearchCopyWithImpl<_ResSearch>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_results),
+      offset,
+      number,
+      totalResults);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ResSearchImplCopyWith<_$ResSearchImpl> get copyWith =>
+      __$$ResSearchImplCopyWithImpl<_$ResSearchImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResSearchToJson(this);
+    return _$$ResSearchImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _ResSearch implements ResSearch {
   const factory _ResSearch(
-      {required List<Result> results,
-      required int offset,
-      required int number,
-      required int totalResults}) = _$_ResSearch;
+      {required final List<Result> results,
+      required final int offset,
+      required final int number,
+      required final int totalResults}) = _$ResSearchImpl;
 
   factory _ResSearch.fromJson(Map<String, dynamic> json) =
-      _$_ResSearch.fromJson;
+      _$ResSearchImpl.fromJson;
 
   @override
-  List<Result> get results => throw _privateConstructorUsedError;
+  List<Result> get results;
   @override
-  int get offset => throw _privateConstructorUsedError;
+  int get offset;
   @override
-  int get number => throw _privateConstructorUsedError;
+  int get number;
   @override
-  int get totalResults => throw _privateConstructorUsedError;
+  int get totalResults;
   @override
   @JsonKey(ignore: true)
-  _$ResSearchCopyWith<_ResSearch> get copyWith =>
+  _$$ResSearchImplCopyWith<_$ResSearchImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 Result _$ResultFromJson(Map<String, dynamic> json) {
   return _Result.fromJson(json);
 }
-
-/// @nodoc
-class _$ResultTearOff {
-  const _$ResultTearOff();
-
-  _Result call(
-      {required int id,
-      required String title,
-      required String image,
-      required String imageType}) {
-    return _Result(
-      id: id,
-      title: title,
-      image: image,
-      imageType: imageType,
-    );
-  }
-
-  Result fromJson(Map<String, Object> json) {
-    return Result.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Result = _$ResultTearOff();
 
 /// @nodoc
 mixin _$Result {
@@ -273,84 +237,90 @@ mixin _$Result {
 /// @nodoc
 abstract class $ResultCopyWith<$Res> {
   factory $ResultCopyWith(Result value, $Res Function(Result) then) =
-      _$ResultCopyWithImpl<$Res>;
+      _$ResultCopyWithImpl<$Res, Result>;
+  @useResult
   $Res call({int id, String title, String image, String imageType});
 }
 
 /// @nodoc
-class _$ResultCopyWithImpl<$Res> implements $ResultCopyWith<$Res> {
+class _$ResultCopyWithImpl<$Res, $Val extends Result>
+    implements $ResultCopyWith<$Res> {
   _$ResultCopyWithImpl(this._value, this._then);
 
-  final Result _value;
   // ignore: unused_field
-  final $Res Function(Result) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? title = freezed,
-    Object? image = freezed,
-    Object? imageType = freezed,
+    Object? id = null,
+    Object? title = null,
+    Object? image = null,
+    Object? imageType = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      image: image == freezed
+      image: null == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String,
-      imageType: imageType == freezed
+      imageType: null == imageType
           ? _value.imageType
           : imageType // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ResultCopyWith<$Res> implements $ResultCopyWith<$Res> {
-  factory _$ResultCopyWith(_Result value, $Res Function(_Result) then) =
-      __$ResultCopyWithImpl<$Res>;
+abstract class _$$ResultImplCopyWith<$Res> implements $ResultCopyWith<$Res> {
+  factory _$$ResultImplCopyWith(
+          _$ResultImpl value, $Res Function(_$ResultImpl) then) =
+      __$$ResultImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int id, String title, String image, String imageType});
 }
 
 /// @nodoc
-class __$ResultCopyWithImpl<$Res> extends _$ResultCopyWithImpl<$Res>
-    implements _$ResultCopyWith<$Res> {
-  __$ResultCopyWithImpl(_Result _value, $Res Function(_Result) _then)
-      : super(_value, (v) => _then(v as _Result));
+class __$$ResultImplCopyWithImpl<$Res>
+    extends _$ResultCopyWithImpl<$Res, _$ResultImpl>
+    implements _$$ResultImplCopyWith<$Res> {
+  __$$ResultImplCopyWithImpl(
+      _$ResultImpl _value, $Res Function(_$ResultImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _Result get _value => super._value as _Result;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? title = freezed,
-    Object? image = freezed,
-    Object? imageType = freezed,
+    Object? id = null,
+    Object? title = null,
+    Object? image = null,
+    Object? imageType = null,
   }) {
-    return _then(_Result(
-      id: id == freezed
+    return _then(_$ResultImpl(
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      image: image == freezed
+      image: null == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String,
-      imageType: imageType == freezed
+      imageType: null == imageType
           ? _value.imageType
           : imageType // ignore: cast_nullable_to_non_nullable
               as String,
@@ -360,15 +330,15 @@ class __$ResultCopyWithImpl<$Res> extends _$ResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Result implements _Result {
-  const _$_Result(
+class _$ResultImpl implements _Result {
+  const _$ResultImpl(
       {required this.id,
       required this.title,
       required this.image,
       required this.imageType});
 
-  factory _$_Result.fromJson(Map<String, dynamic> json) =>
-      _$$_ResultFromJson(json);
+  factory _$ResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResultImplFromJson(json);
 
   @override
   final int id;
@@ -385,57 +355,54 @@ class _$_Result implements _Result {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _Result &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.title, title) ||
-                const DeepCollectionEquality().equals(other.title, title)) &&
-            (identical(other.image, image) ||
-                const DeepCollectionEquality().equals(other.image, image)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$ResultImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.image, image) || other.image == image) &&
             (identical(other.imageType, imageType) ||
-                const DeepCollectionEquality()
-                    .equals(other.imageType, imageType)));
+                other.imageType == imageType));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(title) ^
-      const DeepCollectionEquality().hash(image) ^
-      const DeepCollectionEquality().hash(imageType);
 
   @JsonKey(ignore: true)
   @override
-  _$ResultCopyWith<_Result> get copyWith =>
-      __$ResultCopyWithImpl<_Result>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, id, title, image, imageType);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ResultImplCopyWith<_$ResultImpl> get copyWith =>
+      __$$ResultImplCopyWithImpl<_$ResultImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResultToJson(this);
+    return _$$ResultImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Result implements Result {
   const factory _Result(
-      {required int id,
-      required String title,
-      required String image,
-      required String imageType}) = _$_Result;
+      {required final int id,
+      required final String title,
+      required final String image,
+      required final String imageType}) = _$ResultImpl;
 
-  factory _Result.fromJson(Map<String, dynamic> json) = _$_Result.fromJson;
+  factory _Result.fromJson(Map<String, dynamic> json) = _$ResultImpl.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  String get title => throw _privateConstructorUsedError;
+  String get title;
   @override
-  String get image => throw _privateConstructorUsedError;
+  String get image;
   @override
-  String get imageType => throw _privateConstructorUsedError;
+  String get imageType;
   @override
   @JsonKey(ignore: true)
-  _$ResultCopyWith<_Result> get copyWith => throw _privateConstructorUsedError;
+  _$$ResultImplCopyWith<_$ResultImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

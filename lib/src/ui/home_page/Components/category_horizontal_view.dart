@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:food_stuff/src/data/model/random_recipe/random_recipe.dart';
@@ -10,7 +11,7 @@ import 'package:food_stuff/src/utils/constants.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class CategoryHorizontalView extends StatelessWidget {
-  const CategoryHorizontalView({required this.tag, Key? key}) : super(key: key);
+  const CategoryHorizontalView({required this.tag, super.key});
   final String tag;
 
   @override
@@ -23,33 +24,32 @@ class CategoryHorizontalView extends StatelessWidget {
 }
 
 class _ListFoodItems extends HookConsumerWidget {
-  const _ListFoodItems({required this.size, required this.tag, Key? key})
-      : super(key: key);
+  const _ListFoodItems({required this.size, required this.tag});
   final String tag;
   final double size;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final ValueNotifier<List<Recipe>?> _listOfFoodItems = useState(null);
+    final ValueNotifier<List<Recipe>?> listOfFoodItems = useState(null);
 
     useEffect(() {
       ref.read(homeProvider.notifier).getRandomRecipe(tag: tag).then((value) {
-        _listOfFoodItems.value = value.recipes;
+        listOfFoodItems.value = value.recipes;
       });
       return null;
     }, []);
 
     return LoadingScreen(
-      data: _listOfFoodItems.value,
+      data: listOfFoodItems.value,
       child: SizedBox(
-        height: kScreenWidth(context) / size + 40,
+        height: (kScreenWidth(context) / size) + (kIsWeb ? 46 : 44),
         child: ListView.builder(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,
-            itemCount: _listOfFoodItems.value?.length,
+            itemCount: listOfFoodItems.value?.length,
             itemBuilder: (context, index) => _FoodItemGrid(
-                listOfFoodItems: _listOfFoodItems,
+                listOfFoodItems: listOfFoodItems,
                 index: index,
                 aspectRatio: size)),
       ),
@@ -59,12 +59,10 @@ class _ListFoodItems extends HookConsumerWidget {
 
 class _FoodItemGrid extends StatelessWidget {
   const _FoodItemGrid({
-    Key? key,
     required ValueNotifier<List<Recipe>?> listOfFoodItems,
     required this.index,
     required this.aspectRatio,
-  })  : _listOfFoodItems = listOfFoodItems,
-        super(key: key);
+  }) : _listOfFoodItems = listOfFoodItems;
 
   final ValueNotifier<List<Recipe>?> _listOfFoodItems;
   final int index;
@@ -93,6 +91,7 @@ class _FoodItemGrid extends StatelessWidget {
             width: 1.5 * kScreenWidth(context) / aspectRatio,
             child: Text(
               _listOfFoodItems.value?[index].title ?? "",
+              overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.center,
               maxLines: 2,
               style: kFoodNameFontStyle,

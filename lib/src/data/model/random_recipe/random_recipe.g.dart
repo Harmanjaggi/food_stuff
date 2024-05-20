@@ -6,19 +6,19 @@ part of 'random_recipe.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_RandomRecipe _$$_RandomRecipeFromJson(Map<String, dynamic> json) =>
-    _$_RandomRecipe(
+_$RandomRecipeImpl _$$RandomRecipeImplFromJson(Map<String, dynamic> json) =>
+    _$RandomRecipeImpl(
       recipes: (json['recipes'] as List<dynamic>)
           .map((e) => Recipe.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_RandomRecipeToJson(_$_RandomRecipe instance) =>
+Map<String, dynamic> _$$RandomRecipeImplToJson(_$RandomRecipeImpl instance) =>
     <String, dynamic>{
       'recipes': instance.recipes,
     };
 
-_$_Recipe _$$_RecipeFromJson(Map<String, dynamic> json) => _$_Recipe(
+_$RecipeImpl _$$RecipeImplFromJson(Map<String, dynamic> json) => _$RecipeImpl(
       vegetarian: json['vegetarian'] as bool,
       vegan: json['vegan'] as bool,
       glutenFree: json['glutenFree'] as bool,
@@ -43,7 +43,8 @@ _$_Recipe _$$_RecipeFromJson(Map<String, dynamic> json) => _$_Recipe(
       cookingMinutes: json['cookingMinutes'] as int?,
     );
 
-Map<String, dynamic> _$$_RecipeToJson(_$_Recipe instance) => <String, dynamic>{
+Map<String, dynamic> _$$RecipeImplToJson(_$RecipeImpl instance) =>
+    <String, dynamic>{
       'vegetarian': instance.vegetarian,
       'vegan': instance.vegan,
       'glutenFree': instance.glutenFree,
@@ -65,24 +66,26 @@ Map<String, dynamic> _$$_RecipeToJson(_$_Recipe instance) => <String, dynamic>{
       'cookingMinutes': instance.cookingMinutes,
     };
 
-_$_Measures _$$_MeasuresFromJson(Map<String, dynamic> json) => _$_Measures(
+_$MeasuresImpl _$$MeasuresImplFromJson(Map<String, dynamic> json) =>
+    _$MeasuresImpl(
       us: Metric.fromJson(json['us'] as Map<String, dynamic>),
       metric: Metric.fromJson(json['metric'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MeasuresToJson(_$_Measures instance) =>
+Map<String, dynamic> _$$MeasuresImplToJson(_$MeasuresImpl instance) =>
     <String, dynamic>{
       'us': instance.us,
       'metric': instance.metric,
     };
 
-_$_Metric _$$_MetricFromJson(Map<String, dynamic> json) => _$_Metric(
+_$MetricImpl _$$MetricImplFromJson(Map<String, dynamic> json) => _$MetricImpl(
       amount: (json['amount'] as num).toDouble(),
       unitShort: json['unitShort'] as String,
       unitLong: json['unitLong'] as String,
     );
 
-Map<String, dynamic> _$$_MetricToJson(_$_Metric instance) => <String, dynamic>{
+Map<String, dynamic> _$$MetricImplToJson(_$MetricImpl instance) =>
+    <String, dynamic>{
       'amount': instance.amount,
       'unitShort': instance.unitShort,
       'unitLong': instance.unitLong,

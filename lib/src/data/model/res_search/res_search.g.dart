@@ -6,7 +6,8 @@ part of 'res_search.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ResSearch _$$_ResSearchFromJson(Map<String, dynamic> json) => _$_ResSearch(
+_$ResSearchImpl _$$ResSearchImplFromJson(Map<String, dynamic> json) =>
+    _$ResSearchImpl(
       results: (json['results'] as List<dynamic>)
           .map((e) => Result.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -15,7 +16,7 @@ _$_ResSearch _$$_ResSearchFromJson(Map<String, dynamic> json) => _$_ResSearch(
       totalResults: json['totalResults'] as int,
     );
 
-Map<String, dynamic> _$$_ResSearchToJson(_$_ResSearch instance) =>
+Map<String, dynamic> _$$ResSearchImplToJson(_$ResSearchImpl instance) =>
     <String, dynamic>{
       'results': instance.results,
       'offset': instance.offset,
@@ -23,14 +24,15 @@ Map<String, dynamic> _$$_ResSearchToJson(_$_ResSearch instance) =>
       'totalResults': instance.totalResults,
     };
 
-_$_Result _$$_ResultFromJson(Map<String, dynamic> json) => _$_Result(
+_$ResultImpl _$$ResultImplFromJson(Map<String, dynamic> json) => _$ResultImpl(
       id: json['id'] as int,
       title: json['title'] as String,
       image: json['image'] as String,
       imageType: json['imageType'] as String,
     );
 
-Map<String, dynamic> _$$_ResultToJson(_$_Result instance) => <String, dynamic>{
+Map<String, dynamic> _$$ResultImplToJson(_$ResultImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'title': instance.title,
       'image': instance.image,

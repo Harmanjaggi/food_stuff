@@ -8,13 +8,13 @@ abstract class SearchRepository {
 }
 
 final searchResultRepositoryProvider =
-    Provider((ref) => SearchResultRepositoryImpl(ref.read));
+    Provider((ref) => SearchResultRepositoryImpl(ref));
 
 class SearchResultRepositoryImpl implements SearchRepository {
-  SearchResultRepositoryImpl(this._reader);
+  SearchResultRepositoryImpl(this._ref);
 
-  final Reader _reader;
-  late final Dio _dio = _reader(dioProvider);
+  final ProviderRef _ref;
+  late final Dio _dio = _ref.read(dioProvider);
 
   @override
   Future<ResSearch> getSearch({int count = 25, String query = ''}) {

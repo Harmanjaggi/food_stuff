@@ -6,8 +6,8 @@ part of 'res_recipe_info.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ResRecipeInfo _$$_ResRecipeInfoFromJson(Map<String, dynamic> json) =>
-    _$_ResRecipeInfo(
+_$ResRecipeInfoImpl _$$ResRecipeInfoImplFromJson(Map<String, dynamic> json) =>
+    _$ResRecipeInfoImpl(
       vegetarian: json['vegetarian'] as bool?,
       vegan: json['vegan'] as bool?,
       glutenFree: json['glutenFree'] as bool?,
@@ -24,8 +24,8 @@ _$_ResRecipeInfo _$$_ResRecipeInfoFromJson(Map<String, dynamic> json) =>
       creditsText: json['creditsText'] as String?,
       license: json['license'] as String?,
       sourceName: json['sourceName'] as String?,
-      extendedIngredients: (json['extendedIngredients'] as List<dynamic>)
-          .map((e) => ExtendedIngredient.fromJson(e as Map<String, dynamic>))
+      extendedIngredients: (json['extendedIngredients'] as List<dynamic>?)
+          ?.map((e) => ExtendedIngredient.fromJson(e as Map<String, dynamic>))
           .toList(),
       id: json['id'] as int?,
       title: json['title'] as String?,
@@ -35,20 +35,26 @@ _$_ResRecipeInfo _$$_ResRecipeInfoFromJson(Map<String, dynamic> json) =>
       image: json['image'] as String?,
       imageType: json['imageType'] as String?,
       summary: json['summary'] as String?,
-      cuisines: json['cuisines'] as List<dynamic>,
-      dishTypes:
-          (json['dishTypes'] as List<dynamic>).map((e) => e as String).toList(),
-      diets: (json['diets'] as List<dynamic>).map((e) => e as String).toList(),
-      occasions: json['occasions'] as List<dynamic>,
+      cuisines: (json['cuisines'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      dishTypes: (json['dishTypes'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      diets:
+          (json['diets'] as List<dynamic>?)?.map((e) => e as String).toList(),
+      occasions: (json['occasions'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
       instructions: json['instructions'] as String?,
-      analyzedInstructions: (json['analyzedInstructions'] as List<dynamic>)
-          .map((e) => AnalysedInstructions.fromJson(e as Map<String, dynamic>))
+      analyzedInstructions: (json['analyzedInstructions'] as List<dynamic>?)
+          ?.map((e) => AnalysedInstructions.fromJson(e as Map<String, dynamic>))
           .toList(),
       originalId: json['originalId'],
       spoonacularSourceUrl: json['spoonacularSourceUrl'] as String?,
     );
 
-Map<String, dynamic> _$$_ResRecipeInfoToJson(_$_ResRecipeInfo instance) =>
+Map<String, dynamic> _$$ResRecipeInfoImplToJson(_$ResRecipeInfoImpl instance) =>
     <String, dynamic>{
       'vegetarian': instance.vegetarian,
       'vegan': instance.vegan,
@@ -85,9 +91,9 @@ Map<String, dynamic> _$$_ResRecipeInfoToJson(_$_ResRecipeInfo instance) =>
       'spoonacularSourceUrl': instance.spoonacularSourceUrl,
     };
 
-_$_ExtendedIngredient _$$_ExtendedIngredientFromJson(
+_$ExtendedIngredientImpl _$$ExtendedIngredientImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ExtendedIngredient(
+    _$ExtendedIngredientImpl(
       id: json['id'] as int?,
       aisle: json['aisle'] as String?,
       image: json['image'] as String?,
@@ -99,14 +105,14 @@ _$_ExtendedIngredient _$$_ExtendedIngredientFromJson(
       originalName: json['originalName'] as String?,
       amount: (json['amount'] as num?)?.toDouble(),
       unit: json['unit'] as String?,
-      meta: (json['meta'] as List<dynamic>).map((e) => e as String).toList(),
-      metaInformation: (json['metaInformation'] as List<dynamic>)
-          .map((e) => e as String)
+      meta: (json['meta'] as List<dynamic>?)?.map((e) => e as String).toList(),
+      metaInformation: (json['metaInformation'] as List<dynamic>?)
+          ?.map((e) => e as String)
           .toList(),
     );
 
-Map<String, dynamic> _$$_ExtendedIngredientToJson(
-        _$_ExtendedIngredient instance) =>
+Map<String, dynamic> _$$ExtendedIngredientImplToJson(
+        _$ExtendedIngredientImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'aisle': instance.aisle,
@@ -123,60 +129,62 @@ Map<String, dynamic> _$$_ExtendedIngredientToJson(
       'metaInformation': instance.metaInformation,
     };
 
-_$_AnalysedInstructions _$$_AnalysedInstructionsFromJson(
+_$AnalysedInstructionsImpl _$$AnalysedInstructionsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AnalysedInstructions(
+    _$AnalysedInstructionsImpl(
       name: json['name'] as String?,
-      steps: (json['steps'] as List<dynamic>)
-          .map((e) => Step.fromJson(e as Map<String, dynamic>))
+      steps: (json['steps'] as List<dynamic>?)
+          ?.map((e) => Step.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_AnalysedInstructionsToJson(
-        _$_AnalysedInstructions instance) =>
+Map<String, dynamic> _$$AnalysedInstructionsImplToJson(
+        _$AnalysedInstructionsImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
       'steps': instance.steps,
     };
 
-_$_Step _$$_StepFromJson(Map<String, dynamic> json) => _$_Step(
+_$StepImpl _$$StepImplFromJson(Map<String, dynamic> json) => _$StepImpl(
       number: json['number'] as int?,
       step: json['step'] as String?,
-      ingredients: (json['ingredients'] as List<dynamic>)
-          .map((e) => Ent.fromJson(e as Map<String, dynamic>))
+      ingredients: (json['ingredients'] as List<dynamic>?)
+          ?.map((e) => Ent.fromJson(e as Map<String, dynamic>))
           .toList(),
-      equipment: (json['equipment'] as List<dynamic>)
-          .map((e) => Ent.fromJson(e as Map<String, dynamic>))
+      equipment: (json['equipment'] as List<dynamic>?)
+          ?.map((e) => Ent.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_StepToJson(_$_Step instance) => <String, dynamic>{
+Map<String, dynamic> _$$StepImplToJson(_$StepImpl instance) =>
+    <String, dynamic>{
       'number': instance.number,
       'step': instance.step,
       'ingredients': instance.ingredients,
       'equipment': instance.equipment,
     };
 
-_$_Ent _$$_EntFromJson(Map<String, dynamic> json) => _$_Ent(
+_$EntImpl _$$EntImplFromJson(Map<String, dynamic> json) => _$EntImpl(
       id: json['id'] as int?,
       name: json['name'] as String?,
       localizedName: json['localizedName'] as String?,
       image: json['image'] as String?,
     );
 
-Map<String, dynamic> _$$_EntToJson(_$_Ent instance) => <String, dynamic>{
+Map<String, dynamic> _$$EntImplToJson(_$EntImpl instance) => <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
       'localizedName': instance.localizedName,
       'image': instance.image,
     };
 
-_$_Length _$$_LengthFromJson(Map<String, dynamic> json) => _$_Length(
+_$LengthImpl _$$LengthImplFromJson(Map<String, dynamic> json) => _$LengthImpl(
       number: json['number'] as int?,
       unit: json['unit'] as String?,
     );
 
-Map<String, dynamic> _$$_LengthToJson(_$_Length instance) => <String, dynamic>{
+Map<String, dynamic> _$$LengthImplToJson(_$LengthImpl instance) =>
+    <String, dynamic>{
       'number': instance.number,
       'unit': instance.unit,
     };

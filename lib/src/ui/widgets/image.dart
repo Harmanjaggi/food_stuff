@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 
 class CustomImage extends StatelessWidget {
   const CustomImage(
-      {Key? key,
+      {super.key,
       required this.imageUrl,
       required this.fit,
-      this.needFrameBuilder = false})
-      : super(key: key);
+      this.needFrameBuilder = false});
   final String imageUrl;
   final BoxFit fit;
   final bool needFrameBuilder;
 
   @override
   Widget build(BuildContext context) {
+    // return Image.network(
+    //     'https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
     return Image.network(
       imageUrl,
       fit: fit,

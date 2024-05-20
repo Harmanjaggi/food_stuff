@@ -12,7 +12,7 @@ import 'package:food_stuff/src/ui/widgets/responsive.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class SearchPage extends HookConsumerWidget {
-  const SearchPage({this.userSearch, Key? key}) : super(key: key);
+  const SearchPage({this.userSearch, super.key});
 
   final String? userSearch;
 
@@ -24,7 +24,8 @@ class SearchPage extends HookConsumerWidget {
         useState(List.empty());
 
     useEffect(() {
-      ref.read(searchProvider.notifier)
+      ref
+          .read(searchProvider.notifier)
           .getAutocompleteSearch(query: update.text)
           .then((value) {
         listOfAutoComplete.value = value;
@@ -47,7 +48,7 @@ class SearchPage extends HookConsumerWidget {
                       onPressed: () => Navigator.pop(context),
                     ),
                     Expanded(
-                        child: SearchBar(
+                        child: CustomSearchBar(
                       readOnly: false,
                       autofocus: true,
                       onClick: () {},

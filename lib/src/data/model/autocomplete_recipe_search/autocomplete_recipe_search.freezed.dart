@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'autocomplete_recipe_search.dart';
 
@@ -11,31 +12,12 @@ part of 'autocomplete_recipe_search.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 AutocompleteRecipeSearch _$AutocompleteRecipeSearchFromJson(
     Map<String, dynamic> json) {
   return _AutocompleteRecipeSearch.fromJson(json);
 }
-
-/// @nodoc
-class _$AutocompleteRecipeSearchTearOff {
-  const _$AutocompleteRecipeSearchTearOff();
-
-  _AutocompleteRecipeSearch call({required int id, required String title}) {
-    return _AutocompleteRecipeSearch(
-      id: id,
-      title: title,
-    );
-  }
-
-  AutocompleteRecipeSearch fromJson(Map<String, Object> json) {
-    return AutocompleteRecipeSearch.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AutocompleteRecipeSearch = _$AutocompleteRecipeSearchTearOff();
 
 /// @nodoc
 mixin _$AutocompleteRecipeSearch {
@@ -52,70 +34,75 @@ mixin _$AutocompleteRecipeSearch {
 abstract class $AutocompleteRecipeSearchCopyWith<$Res> {
   factory $AutocompleteRecipeSearchCopyWith(AutocompleteRecipeSearch value,
           $Res Function(AutocompleteRecipeSearch) then) =
-      _$AutocompleteRecipeSearchCopyWithImpl<$Res>;
+      _$AutocompleteRecipeSearchCopyWithImpl<$Res, AutocompleteRecipeSearch>;
+  @useResult
   $Res call({int id, String title});
 }
 
 /// @nodoc
-class _$AutocompleteRecipeSearchCopyWithImpl<$Res>
+class _$AutocompleteRecipeSearchCopyWithImpl<$Res,
+        $Val extends AutocompleteRecipeSearch>
     implements $AutocompleteRecipeSearchCopyWith<$Res> {
   _$AutocompleteRecipeSearchCopyWithImpl(this._value, this._then);
 
-  final AutocompleteRecipeSearch _value;
   // ignore: unused_field
-  final $Res Function(AutocompleteRecipeSearch) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? title = freezed,
+    Object? id = null,
+    Object? title = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$AutocompleteRecipeSearchCopyWith<$Res>
+abstract class _$$AutocompleteRecipeSearchImplCopyWith<$Res>
     implements $AutocompleteRecipeSearchCopyWith<$Res> {
-  factory _$AutocompleteRecipeSearchCopyWith(_AutocompleteRecipeSearch value,
-          $Res Function(_AutocompleteRecipeSearch) then) =
-      __$AutocompleteRecipeSearchCopyWithImpl<$Res>;
+  factory _$$AutocompleteRecipeSearchImplCopyWith(
+          _$AutocompleteRecipeSearchImpl value,
+          $Res Function(_$AutocompleteRecipeSearchImpl) then) =
+      __$$AutocompleteRecipeSearchImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int id, String title});
 }
 
 /// @nodoc
-class __$AutocompleteRecipeSearchCopyWithImpl<$Res>
-    extends _$AutocompleteRecipeSearchCopyWithImpl<$Res>
-    implements _$AutocompleteRecipeSearchCopyWith<$Res> {
-  __$AutocompleteRecipeSearchCopyWithImpl(_AutocompleteRecipeSearch _value,
-      $Res Function(_AutocompleteRecipeSearch) _then)
-      : super(_value, (v) => _then(v as _AutocompleteRecipeSearch));
+class __$$AutocompleteRecipeSearchImplCopyWithImpl<$Res>
+    extends _$AutocompleteRecipeSearchCopyWithImpl<$Res,
+        _$AutocompleteRecipeSearchImpl>
+    implements _$$AutocompleteRecipeSearchImplCopyWith<$Res> {
+  __$$AutocompleteRecipeSearchImplCopyWithImpl(
+      _$AutocompleteRecipeSearchImpl _value,
+      $Res Function(_$AutocompleteRecipeSearchImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _AutocompleteRecipeSearch get _value =>
-      super._value as _AutocompleteRecipeSearch;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? title = freezed,
+    Object? id = null,
+    Object? title = null,
   }) {
-    return _then(_AutocompleteRecipeSearch(
-      id: id == freezed
+    return _then(_$AutocompleteRecipeSearchImpl(
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
@@ -125,11 +112,11 @@ class __$AutocompleteRecipeSearchCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AutocompleteRecipeSearch implements _AutocompleteRecipeSearch {
-  const _$_AutocompleteRecipeSearch({required this.id, required this.title});
+class _$AutocompleteRecipeSearchImpl implements _AutocompleteRecipeSearch {
+  const _$AutocompleteRecipeSearchImpl({required this.id, required this.title});
 
-  factory _$_AutocompleteRecipeSearch.fromJson(Map<String, dynamic> json) =>
-      _$$_AutocompleteRecipeSearchFromJson(json);
+  factory _$AutocompleteRecipeSearchImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AutocompleteRecipeSearchImplFromJson(json);
 
   @override
   final int id;
@@ -142,46 +129,47 @@ class _$_AutocompleteRecipeSearch implements _AutocompleteRecipeSearch {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _AutocompleteRecipeSearch &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.title, title) ||
-                const DeepCollectionEquality().equals(other.title, title)));
+        (other.runtimeType == runtimeType &&
+            other is _$AutocompleteRecipeSearchImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.title, title) || other.title == title));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(title);
 
   @JsonKey(ignore: true)
   @override
-  _$AutocompleteRecipeSearchCopyWith<_AutocompleteRecipeSearch> get copyWith =>
-      __$AutocompleteRecipeSearchCopyWithImpl<_AutocompleteRecipeSearch>(
-          this, _$identity);
+  int get hashCode => Object.hash(runtimeType, id, title);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AutocompleteRecipeSearchImplCopyWith<_$AutocompleteRecipeSearchImpl>
+      get copyWith => __$$AutocompleteRecipeSearchImplCopyWithImpl<
+          _$AutocompleteRecipeSearchImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AutocompleteRecipeSearchToJson(this);
+    return _$$AutocompleteRecipeSearchImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _AutocompleteRecipeSearch implements AutocompleteRecipeSearch {
   const factory _AutocompleteRecipeSearch(
-      {required int id, required String title}) = _$_AutocompleteRecipeSearch;
+      {required final int id,
+      required final String title}) = _$AutocompleteRecipeSearchImpl;
 
   factory _AutocompleteRecipeSearch.fromJson(Map<String, dynamic> json) =
-      _$_AutocompleteRecipeSearch.fromJson;
+      _$AutocompleteRecipeSearchImpl.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  String get title => throw _privateConstructorUsedError;
+  String get title;
   @override
   @JsonKey(ignore: true)
-  _$AutocompleteRecipeSearchCopyWith<_AutocompleteRecipeSearch> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AutocompleteRecipeSearchImplCopyWith<_$AutocompleteRecipeSearchImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

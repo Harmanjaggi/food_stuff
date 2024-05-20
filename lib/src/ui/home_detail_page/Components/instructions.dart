@@ -4,8 +4,7 @@ import 'package:food_stuff/src/data/model/recipe_information/res_recipe_info.dar
 import 'package:food_stuff/src/utils/constants.dart';
 
 class Instructions extends HookWidget {
-  const Instructions({required this.instructionList, Key? key})
-      : super(key: key);
+  const Instructions({required this.instructionList, super.key});
 
   final AnalysedInstructions instructionList;
 
@@ -16,7 +15,7 @@ class Instructions extends HookWidget {
       child: ListView.separated(
         physics: const ScrollPhysics(),
         shrinkWrap: true,
-        itemCount: instructionList.steps.length,
+        itemCount: instructionList.steps?.length ?? 0,
         itemBuilder: (context, index) =>
             _instructionStep(instructionList, index),
         separatorBuilder: (context, index) {
@@ -33,7 +32,7 @@ class Instructions extends HookWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 8),
           child: Text(
-            '${step.steps[index].number.toString()}.',
+            '${step.steps?[index].number.toString()}.',
             style: kPointerStyle,
           ),
         ),
@@ -42,7 +41,7 @@ class Instructions extends HookWidget {
         ),
         Flexible(
           child: Text(
-            step.steps[index].step ?? '',
+            step.steps?[index].step ?? '',
           ),
         ),
       ],

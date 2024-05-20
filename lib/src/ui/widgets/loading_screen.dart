@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class LoadingScreen extends StatelessWidget {
-  const LoadingScreen({Key? key, required this.data, required this.child})
-      : super(key: key);
+  const LoadingScreen({super.key, required this.data, required this.child});
 
   final Widget child;
   final dynamic data;

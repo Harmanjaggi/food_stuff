@@ -4,8 +4,7 @@ import 'package:food_stuff/src/utils/constants.dart';
 
 class PopularSearch extends StatelessWidget {
   const PopularSearch(
-      {Key? key, this.crossAxisCount = 2, required this.context})
-      : super(key: key);
+      {super.key, this.crossAxisCount = 2, required this.context});
 
   final BuildContext context;
   final int crossAxisCount;

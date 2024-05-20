@@ -12,88 +12,80 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:food_stuff/src/utils/strings.dart';
 
 class HomeDetailPage extends HookConsumerWidget {
-  const HomeDetailPage({required this.id, Key? key}) : super(key: key);
+  const HomeDetailPage({required this.id, super.key});
 
   final int id;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final ValueNotifier<ResRecipeInfo?> _details = useState(null);
+    final ValueNotifier<ResRecipeInfo?> details = useState(null);
 
     useEffect(() {
       ref
           .read(homeDetailProvider.notifier)
           .getRecipeInformation(id: id)
           .then((value) {
-        _details.value = value;
+        details.value = value;
       });
       return null;
     }, []);
 
     return SafeArea(
-        child: Scaffold(
-            body: LoadingScreen(
-                data: _details.value,
-                child: SingleChildScrollView(
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        IconButton(
-                            icon: const Icon(Icons.arrow_back),
-                            onPressed: () => Navigator.pop(context)),
-                        FoodIntro(
-                            context: context,
-                            foodInfo: _details.value?.summary ?? "",
-                            imageUrl: _details.value?.image ?? "",
-                            heading: _details.value?.title ?? "",
-                            servingsTitle:
-                                _details.value?.servings.toString() ?? "",
-                            healthScoreTitle:
-                                _details.value?.healthScore.toString() ?? "",
-                            cookingTime:
-                                _details.value?.readyInMinutes.toString() ??
-                                    ""),
-                        const SizedBox(height: 16),
-                        const Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 16.0),
-                            child:
-                                Text(ingredients, style: kSubtitleFontStyle)),
-                        Padding(
-                            padding:
-                                const EdgeInsets.only(left: 12.0, right: 6),
-                            child: IngredientsTable(
-                              ingredientList:
-                                  _details.value?.extendedIngredients ?? [],
-                            )),
-                        const SizedBox(height: 16),
-                        const Padding(
-                            padding: EdgeInsets.symmetric(
-                                vertical: 8.0, horizontal: 16),
-                            child: Text(
-                              preparation,
-                              style: kSubtitleFontStyle,
-                            )),
-                        const SizedBox(height: 16),
-                        Instructions(
-                            instructionList:
-                                _details.value?.analyzedInstructions[0] ??
-                                    const AnalysedInstructions(
-                                        name: '', steps: [])),
-                        const SizedBox(height: 16),
-                        const Padding(
-                            padding: EdgeInsets.symmetric(
-                                vertical: 8.0, horizontal: 16.0),
-                            child: Text(
-                              similarRecipies,
-                              style: kSubtitleFontStyle,
-                            )),
-                        if (_details.value != null)
-                          CategoryHorizontalView(
-                              tag: _details.value!.diets
-                                  .map((i) => i.toString())
-                                  .join(",")),
-                        const SizedBox(height: 18)
-                      ]),
-                ))));
+      child: Scaffold(
+        body: LoadingScreen(
+          data: details.value,
+          child: SingleChildScrollView(
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              IconButton(
+                  icon: const Icon(Icons.arrow_back),
+                  onPressed: () => Navigator.pop(context)),
+              FoodIntro(
+                  context: context,
+                  foodInfo: details.value?.summary ?? "",
+                  imageUrl: details.value?.image ?? "",
+                  heading: details.value?.title ?? "",
+                  servingsTitle: details.value?.servings.toString() ?? "",
+                  healthScoreTitle: details.value?.healthScore.toString() ?? "",
+                  cookingTime: details.value?.readyInMinutes.toString() ?? ""),
+              const SizedBox(height: 16),
+              const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Text(ingredients, style: kSubtitleFontStyle)),
+              Padding(
+                  padding: const EdgeInsets.only(left: 12.0, right: 6),
+                  child: IngredientsTable(
+                    ingredientList: details.value?.extendedIngredients ?? [],
+                  )),
+              const SizedBox(height: 16),
+              const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16),
+                  child: Text(
+                    preparation,
+                    style: kSubtitleFontStyle,
+                  )),
+              const SizedBox(height: 16),
+              Instructions(
+                  instructionList: details.value?.analyzedInstructions?[0] ??
+                      const AnalysedInstructions(name: '', steps: [])),
+              const SizedBox(height: 16),
+              const Padding(
+                  padding:
+                      EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+                  child: Text(
+                    similarRecipies,
+                    style: kSubtitleFontStyle,
+                  )),
+              if (details.value?.diets != null)
+                CategoryHorizontalView(
+                    tag: details.value!.diets!
+                        .map((i) => i.toString())
+                        .join(",")),
+              const SizedBox(height: 18)
+            ]),
+          ),
+        ),
+      ),
+    );
   }
 }

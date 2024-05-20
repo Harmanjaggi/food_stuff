@@ -3,15 +3,14 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:food_stuff/src/utils/constants.dart';
 import 'package:food_stuff/src/utils/strings.dart';
 
-class SearchBar extends HookWidget {
-  const SearchBar(
-      {Key? key,
+class CustomSearchBar extends HookWidget {
+  const CustomSearchBar(
+      {super.key,
       required this.readOnly,
       required this.autofocus,
       required this.onClick,
       this.onSubitted,
-      this.searchController})
-      : super(key: key);
+      this.searchController});
   final bool readOnly, autofocus;
   final void Function(String value)? onSubitted;
   final void Function() onClick;

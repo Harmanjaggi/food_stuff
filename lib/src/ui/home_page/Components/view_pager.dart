@@ -12,32 +12,31 @@ import '../../widgets/loading_screen.dart';
 import '../home_viewmodel.dart';
 
 class ViewPager extends HookConsumerWidget {
-  const ViewPager({this.dragableImage = true, Key? key}) : super(key: key);
+  const ViewPager({this.dragableImage = true, super.key});
   final bool dragableImage;
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final ValueNotifier<List<Recipe>?> _listOfFoodItems = useState(null);
-    final ValueNotifier<List<Widget>> cardList = useState(List.empty());
+    ValueNotifier<List<Recipe>> listOfFoodItems =
+        useState(List.empty(growable: true));
+    ValueNotifier<List<Widget>> cardList = useState(List.empty(growable: true));
 
-    swipeCard() {
-      final newList = _listOfFoodItems.value;
-      final temp = _listOfFoodItems.value![0];
-      newList!.removeAt(0);
-      newList.add(temp);
-      _listOfFoodItems.value = newList;
-      cardList.value = _getCards(newList, swipeCard);
+    void swipeCard() {
+      final temp = listOfFoodItems.value[0];
+      listOfFoodItems.value.removeAt(0);
+      listOfFoodItems.value.add(temp);
+      cardList.value = _getCards(listOfFoodItems.value, swipeCard);
     }
 
     useEffect(() {
       ref.read(homeProvider.notifier).getRandomRecipe().then((value) {
-        _listOfFoodItems.value = value.recipes;
+        listOfFoodItems.value = List.from(value.recipes);
         cardList.value = _getCards(value.recipes, swipeCard);
       });
       return null;
     }, []);
 
     return LoadingScreen(
-      data: _listOfFoodItems.value,
+      data: listOfFoodItems.value,
       child: Padding(
           padding: const EdgeInsets.all(12.0),
           child: SizedBox(child: Stack(children: cardList.value))),
@@ -45,7 +44,7 @@ class ViewPager extends HookConsumerWidget {
   }
 
   List<Widget> _getCards(List<Recipe> cards, Function() onDrag) {
-    if (cards.isEmpty) return List.empty();
+    if (cards.isEmpty) return List.empty(growable: true);
     List<Widget> cardList = List.empty(growable: true);
 
     for (int x = 2; x >= 0; x--) {
@@ -75,11 +74,10 @@ class ViewPager extends HookConsumerWidget {
 
 class HomeCard extends StatelessWidget {
   const HomeCard(
-      {Key? key,
+      {super.key,
       this.isDragging = false,
       required this.listOfFoodItems,
-      required this.swipe})
-      : super(key: key);
+      required this.swipe});
 
   final Recipe listOfFoodItems;
   final bool isDragging;

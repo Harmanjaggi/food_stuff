@@ -11,8 +11,7 @@ import '../search_result_viewmodel.dart';
 
 class SearchResult extends HookConsumerWidget {
   const SearchResult(
-      {Key? key, this.crossAxisCount = 2, required this.userSearch})
-      : super(key: key);
+      {super.key, this.crossAxisCount = 2, required this.userSearch});
   final String userSearch;
   final int crossAxisCount;
 
@@ -21,7 +20,8 @@ class SearchResult extends HookConsumerWidget {
     final ValueNotifier<List<Result>?> listOfFoodItems = useState(null);
 
     useEffect(() {
-      ref.read(searchResultProvider.notifier)
+      ref
+          .read(searchResultProvider.notifier)
           .getItems(query: userSearch)
           .then((value) {
         listOfFoodItems.value = value.results;

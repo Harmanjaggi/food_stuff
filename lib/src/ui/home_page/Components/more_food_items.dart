@@ -12,16 +12,16 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../home_viewmodel.dart';
 
 class MoreFoodItems extends HookConsumerWidget {
-  const MoreFoodItems({Key? key}) : super(key: key);
+  const MoreFoodItems({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final isSwitched = useState(false);
-    final ValueNotifier<List<Recipe>?> _listOfFoodItems = useState(null);
+    final ValueNotifier<List<Recipe>?> listOfFoodItems = useState(null);
 
     useEffect(() {
       ref.read(homeProvider.notifier).getRandomRecipe().then((value) {
-        _listOfFoodItems.value = value.recipes;
+        listOfFoodItems.value = value.recipes;
       });
       return null;
     }, []);
@@ -29,9 +29,9 @@ class MoreFoodItems extends HookConsumerWidget {
     void onlyVegetarian(bool value) {
       if (isSwitched.value == value) return;
       isSwitched.value = value;
-      _listOfFoodItems.value = null;
+      listOfFoodItems.value = null;
       ref.read(homeProvider.notifier).getRandomRecipe().then((value) {
-        _listOfFoodItems.value = value.recipes;
+        listOfFoodItems.value = value.recipes;
       });
     }
 
@@ -60,11 +60,11 @@ class MoreFoodItems extends HookConsumerWidget {
         ),
         Responsive(
             mobile: _FoodItemsGrid(
-                listOfFoodItems: _listOfFoodItems, crossAxisCount: 2),
+                listOfFoodItems: listOfFoodItems, crossAxisCount: 2),
             tablet: _FoodItemsGrid(
-                listOfFoodItems: _listOfFoodItems, crossAxisCount: 3),
+                listOfFoodItems: listOfFoodItems, crossAxisCount: 3),
             desktop: _FoodItemsGrid(
-                listOfFoodItems: _listOfFoodItems, crossAxisCount: 4)),
+                listOfFoodItems: listOfFoodItems, crossAxisCount: 4)),
       ],
     );
   }
@@ -72,11 +72,9 @@ class MoreFoodItems extends HookConsumerWidget {
 
 class _FoodItemsGrid extends HookWidget {
   const _FoodItemsGrid({
-    Key? key,
     required ValueNotifier<List<Recipe>?> listOfFoodItems,
     required this.crossAxisCount,
-  })  : _listOfFoodItems = listOfFoodItems,
-        super(key: key);
+  }) : _listOfFoodItems = listOfFoodItems;
 
   final ValueNotifier<List<Recipe>?> _listOfFoodItems;
   final int crossAxisCount;
@@ -115,14 +113,11 @@ class _FoodItemsGrid extends HookWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(_listOfFoodItems.value![index].readyInMinutes
-                                  .toString() +
-                              " "),
+                          Text(
+                              "${_listOfFoodItems.value![index].readyInMinutes} "),
                           const Icon(Icons.alarm, size: 16.0),
                           const Spacer(),
-                          Text(_listOfFoodItems.value![index].servings
-                                  .toString() +
-                              " "),
+                          Text("${_listOfFoodItems.value![index].servings} "),
                           const Icon(Icons.star, size: 16.0),
                         ],
                       ),

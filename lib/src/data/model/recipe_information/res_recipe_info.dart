@@ -28,7 +28,7 @@ abstract class ResRecipeInfo with _$ResRecipeInfo {
     String? creditsText,
     String? license,
     String? sourceName,
-    required List<ExtendedIngredient> extendedIngredients,
+    List<ExtendedIngredient>? extendedIngredients,
     int? id,
     String? title,
     int? readyInMinutes,
@@ -37,14 +37,13 @@ abstract class ResRecipeInfo with _$ResRecipeInfo {
     String? image,
     String? imageType,
     String? summary,
-    required List<dynamic> cuisines,
-    required List<String> dishTypes,
-    required List<String> diets,
-    required List<dynamic> occasions,
+    List<String>? cuisines,
+    List<String>? dishTypes,
+    List<String>? diets,
+    List<String>? occasions,
     String? instructions,
-    required List<AnalysedInstructions> analyzedInstructions,
-    // ignore: unnecessary_question_mark
-    dynamic? originalId,
+    List<AnalysedInstructions>? analyzedInstructions,
+    dynamic originalId,
     String? spoonacularSourceUrl,
   }) = _ResRecipeInfo;
 
@@ -66,60 +65,63 @@ abstract class ExtendedIngredient with _$ExtendedIngredient {
     String? originalName,
     double? amount,
     String? unit,
-    required List<String> meta,
-    required List<String> metaInformation,
+    required List<String>? meta,
+    required List<String>? metaInformation,
   }) = _ExtendedIngredient;
 
   factory ExtendedIngredient.fromJson(Map<String, dynamic> json) =>
       _$ExtendedIngredientFromJson(json);
 }
 
+List<AnalysedInstructions> analysedInstructionsFromJson(String str) =>
+    List<AnalysedInstructions>.from(
+        json.decode(str).map((x) => AnalysedInstructions.fromJson(x)));
 
-List<AnalysedInstructions> analysedInstructionsFromJson(String str) => List<AnalysedInstructions>.from(json.decode(str).map((x) => AnalysedInstructions.fromJson(x)));
-
-String analysedInstructionsToJson(List<AnalysedInstructions> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+String analysedInstructionsToJson(List<AnalysedInstructions> data) =>
+    json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 @freezed
 abstract class AnalysedInstructions with _$AnalysedInstructions {
-    const factory AnalysedInstructions({
-        String? name,
-        required List<Step> steps,
-    }) = _AnalysedInstructions;
+  const factory AnalysedInstructions({
+    String? name,
+    required List<Step>? steps,
+  }) = _AnalysedInstructions;
 
-    factory AnalysedInstructions.fromJson(Map<String, dynamic> json) => _$AnalysedInstructionsFromJson(json);
+  factory AnalysedInstructions.fromJson(Map<String, dynamic> json) =>
+      _$AnalysedInstructionsFromJson(json);
 }
 
 @freezed
 abstract class Step with _$Step {
-    const factory Step({
-        int? number,
-        String? step,
-        required List<Ent> ingredients,
-        required List<Ent> equipment,
-        // Length? length,
-    }) = _Step;
+  const factory Step({
+    int? number,
+    String? step,
+    required List<Ent>? ingredients,
+    required List<Ent>? equipment,
+    // Length? length,
+  }) = _Step;
 
-    factory Step.fromJson(Map<String, dynamic> json) => _$StepFromJson(json);
+  factory Step.fromJson(Map<String, dynamic> json) => _$StepFromJson(json);
 }
 
 @freezed
 abstract class Ent with _$Ent {
-    const factory Ent({
-        int? id,
-        String? name,
-        String? localizedName,
-        String? image,
-    }) = _Ent;
+  const factory Ent({
+    int? id,
+    String? name,
+    String? localizedName,
+    String? image,
+  }) = _Ent;
 
-    factory Ent.fromJson(Map<String, dynamic> json) => _$EntFromJson(json);
+  factory Ent.fromJson(Map<String, dynamic> json) => _$EntFromJson(json);
 }
 
 @freezed
 abstract class Length with _$Length {
-    const factory Length({
-        int? number,
-        String? unit,
-    }) = _Length;
+  const factory Length({
+    int? number,
+    String? unit,
+  }) = _Length;
 
-    factory Length.fromJson(Map<String, dynamic> json) => _$LengthFromJson(json);
+  factory Length.fromJson(Map<String, dynamic> json) => _$LengthFromJson(json);
 }

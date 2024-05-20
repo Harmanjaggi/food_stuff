@@ -9,12 +9,12 @@ abstract class AutocompleteSearchRepository {
 }
 
 final autocompleteSearchProvider =
-    Provider((ref) => AutocompleteSearchImpl(ref.read));
+    Provider((ref) => AutocompleteSearchImpl(ref));
 
 class AutocompleteSearchImpl extends AutocompleteSearchRepository {
-  final Reader _reader;
-  late final Dio _dio = _reader(dioProvider);
-  AutocompleteSearchImpl(this._reader);
+  final ProviderRef _ref;
+  late final Dio _dio = _ref.read(dioProvider);
+  AutocompleteSearchImpl(this._ref);
 
   @override
   Future<List<AutocompleteRecipeSearch>> getRecipeInformation(

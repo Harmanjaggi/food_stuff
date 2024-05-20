@@ -12,7 +12,7 @@ class HomeDetailViewModel extends StateNotifier<AsyncValue<ResRecipeInfo>> {
 
   late final RecipeIdImpl _idRepository = _reader.read(recipeIdProvider);
 
-  Future<ResRecipeInfo> getRecipeInformation({int id = 716601}) {
+  Future<ResRecipeInfo> getRecipeInformation({required int id}) {
     return _idRepository.getRecipeInformation(id).then((value) {
       return value;
     });
